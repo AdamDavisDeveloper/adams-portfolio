@@ -9,7 +9,7 @@ export default function HomeMain() {
             <header>
                 <div className="header-text">
                     <span className="name">Adam Davis</span>
-                    <span>developer - designer</span>
+                    <span>developer · designer</span>
                 </div>
                 <img src={HomeImage} alt="upside-down man surrounded by pretty light flares" />
             </header>

@@ -24,6 +24,7 @@ header {
         justify-content: space-between;   
         align-items: flex-end; 
         span {
+            font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
             &:not(.name) { font-size: .75rem; }
         }
     }
