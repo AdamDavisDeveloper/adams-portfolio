@@ -3,6 +3,29 @@ import React from "react"
 import HomeImage from '/src/img/header-home.png';
 import './Main.scss';
 
+//Featured Projects Array
+import FeaturedData from "./FeaturedData";
+
+//Components
+import FeaturedCard from "./FeaturedCard";
+
+
+const FeaturedCards = () => {
+    return (
+        <>
+        {
+            FeaturedData.map((project) => (
+                <FeaturedCard 
+                    title={project.title}
+                    description={project.description}
+                    url={project.url}
+                 />
+            )
+        )}
+        </>
+    )
+}
+
 export default function HomeMain() {
     return (
         <main id="HomeMain">
@@ -16,6 +39,11 @@ export default function HomeMain() {
 
             <div id="TitleDescription">
                 <h1>Web Developer <br /> designing creative solutions <br /> and joyful interfaces.</h1>
+            </div>
+
+            <div id="FeaturedList">
+                <span>Featured</span>
+                <FeaturedCards />
             </div>
         </main>
     )

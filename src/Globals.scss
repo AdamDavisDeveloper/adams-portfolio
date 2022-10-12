@@ -14,14 +14,18 @@ html {
     background: var(--black);
 }
 
+
+// Remember to fix the fonts download issue
+// might help 👇🏻
+// https://stackoverflow.com/questions/19817459/firefox-font-face-with-local-file-downloadable-font-download-failed
 @font-face {
   font-family: 'FiraSansExtraCondensed-Regular';
-  src: local('FiraSansExtraCondensed-Regular'), url(./fonts/FiraSansExtraCondensed-Regular.ttf) format('truetype');
+  src: local('./fonts/FiraSansExtraCondensed-Regular.ttf'), url('./fonts/FiraSansExtraCondensed-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Gruppo';
-  src: local('Gruppo-Regular'), url(./fonts/Gruppo-Regular.ttf) format('truetype');
+  src: local('./fonts/Gruppo-Regular.ttf'), url('./fonts/Gruppo-Regular.ttf') format('truetype');
 }
 
 
