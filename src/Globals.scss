@@ -17,3 +17,11 @@ html {
   font-family: 'FiraSansExtraCondensed-Regular';
   src: local('FiraSansExtraCondensed-Regular'), url(./fonts/FiraSansExtraCondensed-Regular.ttf) format('truetype');
 }
+
+// NavBar Styles
+#NavBar {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    color: white;
+}
