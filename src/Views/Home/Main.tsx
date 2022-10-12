@@ -13,6 +13,10 @@ export default function HomeMain() {
                 </div>
                 <img src={HomeImage} alt="upside-down man surrounded by pretty light flares" />
             </header>
+
+            <div id="TitleDescription">
+                <h1>Web Developer <br /> designing creative solutions <br /> and joyful interfaces.</h1>
+            </div>
         </main>
     )
 }

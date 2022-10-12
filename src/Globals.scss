@@ -1,5 +1,6 @@
 :root {
     --black: #09090C;
+    --white: #F8F8F8;
     --highlight-text: #C28854;
 }
 
@@ -17,6 +18,13 @@ html {
   font-family: 'FiraSansExtraCondensed-Regular';
   src: local('FiraSansExtraCondensed-Regular'), url(./fonts/FiraSansExtraCondensed-Regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Gruppo';
+  src: local('Gruppo-Regular'), url(./fonts/Gruppo-Regular.ttf) format('truetype');
+}
+
+
 
 // NavBar Styles
 #NavBar {

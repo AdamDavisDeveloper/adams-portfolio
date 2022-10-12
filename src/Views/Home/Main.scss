@@ -33,3 +33,12 @@ header {
         margin-bottom: .15rem;
      }
 }
+
+#TitleDescription {
+    font-family: 'Gruppo', sans-serif;
+    h1 {
+        font-size: 1.25rem;
+        color: var(--white);
+        line-height: 28px;
+    }
+}
