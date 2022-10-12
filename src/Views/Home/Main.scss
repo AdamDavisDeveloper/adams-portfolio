@@ -1,0 +1,35 @@
+@import '../../Globals.scss';
+
+#HomeMain {
+    min-height: 100vh;
+    width: 78%;
+    margin: auto;
+    padding-top: 3rem;
+}
+
+header {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    color: var(--highlight-text);
+
+    img { width: 100%; }
+
+    .header-text {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;   
+        align-items: flex-end; 
+        span {
+            &:not(.name) { font-size: .75rem; }
+        }
+    }
+    .name { 
+        font-size: 1.5rem;
+        margin-bottom: .15rem;
+     }
+}

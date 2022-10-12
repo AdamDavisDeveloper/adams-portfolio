@@ -1,0 +1,18 @@
+import React from "react"
+//@ts-ignore -- TS doesn't recognize this as a "module" (jerk)
+import HomeImage from '/src/img/header-home.png';
+import './Main.scss';
+
+export default function HomeMain() {
+    return (
+        <main id="HomeMain">
+            <header>
+                <div className="header-text">
+                    <span className="name">Adam Davis</span>
+                    <span>developer - designer</span>
+                </div>
+                <img src={HomeImage} alt="upsaide-down man surrounded by pretty light flares" />
+            </header>
+        </main>
+    )
+}
