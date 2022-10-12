@@ -1,0 +1,28 @@
+@import '../../Globals.scss';
+
+.featured-card {
+    padding: .5rem;
+    color: var(--white);
+    background: var(--contrast-gray);
+    border-radius: 3px;
+    margin-bottom: .75rem;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .25rem;
+    h1 {
+        font-size: 1.25rem;
+        font-family: 'FiraSansExtraCondensed-Light', sans-serif;
+        font-weight: 300;
+    }
+}
+
+.bottom-row {
+    p {
+        font-size: .85rem;
+        font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
+        font-weight: 100;
+    }
+}

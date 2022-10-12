@@ -2,6 +2,9 @@ import React from "react";
 //@ts-ignore -- TS is a little baby
 import ExternalLinkSVG from '/src/img/external-link.svg';
 
+//Styles
+import '../Home/FeaturedCard.scss'
+
 export default function FeaturedCard(props: {
     title: string,
     description: string,

@@ -1,6 +1,7 @@
 :root {
     --black: #09090C;
     --white: #F8F8F8;
+    --contrast-gray: #1D1D1D;
     --highlight-text: #C28854;
 }
 
@@ -11,6 +12,7 @@
 }
 
 html {
+    font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
     background: var(--black);
 }
 
@@ -21,6 +23,16 @@ html {
 @font-face {
   font-family: 'FiraSansExtraCondensed-Regular';
   src: local('./fonts/FiraSansExtraCondensed-Regular.ttf'), url('./fonts/FiraSansExtraCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraSansExtraCondensed-Light';
+  src: local('./fonts/FiraSansExtraCondensed-Light.ttf'), url('./fonts/FiraSansExtraCondensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraSansExtraCondensed-ExtraLight';
+  src: local('./fonts/FiraSansExtraCondensed-ExtraLight.ttf'), url('./fonts/FiraSansExtraCondensed-ExtraLight.ttf') format('truetype');
 }
 
 @font-face {
