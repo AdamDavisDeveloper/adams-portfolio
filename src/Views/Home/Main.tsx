@@ -11,7 +11,7 @@ export default function HomeMain() {
                     <span className="name">Adam Davis</span>
                     <span>developer - designer</span>
                 </div>
-                <img src={HomeImage} alt="upsaide-down man surrounded by pretty light flares" />
+                <img src={HomeImage} alt="upside-down man surrounded by pretty light flares" />
             </header>
         </main>
     )
