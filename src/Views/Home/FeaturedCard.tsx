@@ -15,18 +15,18 @@ export default function FeaturedCard(props: {
 
     return (
         <>
-            <div className="featured-card">
-                <div className="top-row">
-                    <h1>{title}</h1>
-                    <a href={url}>
+            <a href={url} className="strip-anchor-styles">
+                <div className="featured-card">
+                    <div className="top-row">
+                        <h1>{title}</h1>
                         <img src={ExternalLinkSVG} alt="outlink symbol" />
-                    </a>
-                </div>
+                    </div>
 
-                <div className="bottom-row">
-                    <p>{description}</p>
-                </div>
-            </div>
+                    <div className="bottom-row">
+                        <p>{description}</p>
+                    </div>
+                </div>      
+            </a>
         </>
     )
 }
