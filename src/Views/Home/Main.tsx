@@ -10,22 +10,6 @@ import FeaturedData from "./FeaturedData";
 import FeaturedCard from "./FeaturedCard";
 
 
-const FeaturedCards = () => {
-    return (
-        <>
-        {
-            FeaturedData.map((project) => (
-                <FeaturedCard 
-                    title={project.title}
-                    description={project.description}
-                    url={project.url}
-                 />
-            )
-        )}
-        </>
-    )
-}
-
 export default function HomeMain() {
     return (
         <main id="HomeMain">
@@ -43,7 +27,15 @@ export default function HomeMain() {
 
             <div id="FeaturedList">
                 <span>Featured</span>
-                <FeaturedCards />
+                {
+                    FeaturedData.map((project) => (
+                        <FeaturedCard 
+                            title={project.title}
+                            description={project.description}
+                            url={project.url}
+                        />
+                    )
+                )}
             </div>
         </main>
     )
