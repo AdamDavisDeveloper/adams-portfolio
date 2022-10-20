@@ -4,6 +4,8 @@
     min-height: 100vh;
     width: 78%;
     margin: auto;
+    padding-top: var(--page-padding-top);
+    padding-bottom: var(--page-padding-bottom);
 }
 
 header {

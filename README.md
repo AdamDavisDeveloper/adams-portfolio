@@ -10,3 +10,6 @@ Live link coming soon.
 - Add resume to AboutMe
 - Make a contact form and add recaptcha
 - Design and make a projects page
+
+### Notes
+make navigation an MUI bottom navigation?

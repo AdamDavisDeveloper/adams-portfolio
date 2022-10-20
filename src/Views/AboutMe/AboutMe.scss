@@ -3,6 +3,8 @@
     color: white;
     width: 78%;
     margin: auto;
+    padding-top: var(--page-padding-top);
+    padding-bottom: var(--page-padding-bottom);
     header {
         display: flex;
         justify-content: center;
@@ -45,4 +47,8 @@
         justify-content: space-around;
         margin-top: .75rem;
     }
+}
+
+#MenuIcon {
+    cursor: pointer;
 }

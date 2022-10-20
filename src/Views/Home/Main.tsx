@@ -28,8 +28,9 @@ export default function HomeMain() {
             <div id="FeaturedList">
                 <span>Featured</span>
                 {
-                    FeaturedData.map((project) => (
+                    FeaturedData.map((project, i) => (
                         <FeaturedCard 
+                            key={i}
                             title={project.title}
                             description={project.description}
                             url={project.url}
