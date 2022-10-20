@@ -1,6 +1,13 @@
 import React from 'react';
 import './Globals.scss';
+
+// Views
 import HomeMain from './Views/Home/Main';
+import AboutMe from './Views/AboutMe/AboutMe';
+
+
+// Dependencies
+import { gsap } from "gsap";
 
 // MUI Icons
 import MenuIcon from '@mui/icons-material/Menu';
@@ -13,8 +20,8 @@ export default function App() {
         {/* Hamburger goes here */}
           <div onClick={() => {
             //TODO: have this open the nav
-          }}>
             <MenuIcon />
+          }}>
           </div>
       </div>
     )
@@ -23,7 +30,8 @@ export default function App() {
   return (
    <>
     <NavBar />
-    <HomeMain />
+    {/* <HomeMain /> */}
+    <AboutMe />
    </>
   );
 }
