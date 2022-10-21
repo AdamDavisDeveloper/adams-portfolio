@@ -6,7 +6,7 @@ import HomeMain from './Views/Home/Main';
 import AboutMe from './Views/AboutMe/AboutMe';
 
 // Libraries
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { gsap } from "gsap";
 
 //MUI Components
@@ -19,32 +19,41 @@ import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 
 const NavBar = () => {
-
-  const [ navigationValue, setNavigationValue ] = useState(0)
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    switch(navigationValue) {
-      case 0: navigate('/')
-      case 1: navigate('projects');
-      case 2: navigate('about');
-      default: navigate('/');
-    }
-  }, [navigationValue]);
+  const [ navigationValue, setNavigationValue ] = useState(0);
 
     return (
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-            <BottomNavigation
-              showLabels
-              value={navigationValue}
-              onChange={(event, newValue) => {
-                setNavigationValue(newValue);
-              }}
-            >
-              <BottomNavigationAction key={0} label="Home"      icon={<CottageIcon />} />
-              <BottomNavigationAction key={2} label="Projects"  icon={<DeveloperModeIcon />} />
-              <BottomNavigationAction key={1} label="About Me"  icon={<SentimentSatisfiedAltIcon />} />
-            </BottomNavigation>
+        <BottomNavigation
+          showLabels
+          value={navigationValue}
+          onChange={(event, newValue) => { setNavigationValue(newValue) }}
+        >
+          <BottomNavigationAction 
+            key={0} 
+            label="Home"      
+            component={Link}
+            to='/'
+            value="home"
+            icon={<CottageIcon />} 
+          />
+
+          <BottomNavigationAction 
+            key={1} 
+            label="Projects"  
+            component={Link}
+            to='/projects'
+            value="projects"
+            icon={<DeveloperModeIcon />}
+          />
+          <BottomNavigationAction 
+            key={2} 
+            label="About Me"  
+            component={Link}
+            to='/about'
+            value="about"
+            icon={<SentimentSatisfiedAltIcon />} 
+          />
+        </BottomNavigation>
       </Paper>
     )
 }
@@ -53,11 +62,10 @@ export default function App() {
   return (
    <>
     <BrowserRouter>
+      <NavBar/>
       <Routes>
-        <Route path="/" element={<NavBar/>} >
-          <Route index element={<HomeMain />} />
+          <Route path='/' element={<HomeMain />} />
           <Route path="about" element={<AboutMe />} />
-        </Route>
       </Routes>
     </BrowserRouter>
    </>
