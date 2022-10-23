@@ -10,7 +10,6 @@ import AboutMe from './Views/AboutMe/AboutMe';
 
 // Libraries
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { gsap } from "gsap";
 
 export default function App() {
   return (

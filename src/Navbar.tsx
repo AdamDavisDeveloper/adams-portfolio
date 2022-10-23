@@ -16,15 +16,20 @@ export default function() {
 
   const navActionStyles = {
     color: "white",
-    '& .Mui-selected.MuiSvgIcon-root': {
-      color: '#C28854',
+    '& .MuiSvgIcon-root': {
+      marginBottom: '.35rem',
     }
   }
 
     return (
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
         <BottomNavigation
-          sx={{background: "#1a1a23"}}
+          sx={{
+            background: "#1a1a23",
+            '& .MuiBottomNavigationAction-root.Mui-selected': {
+              color: '#C28854',
+            }
+          }}
           showLabels
           value={navigationValue}
           onChange={(event, newValue) => { setNavigationValue(newValue) }}
