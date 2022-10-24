@@ -11,8 +11,18 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 
 import { Link } from "react-router-dom";
 
+/**
+ * @description this is needed in case a visitor hits this site from a direct URL like '/about', the nav state needs to be set to reflect the URI on load
+ * @returns A string which will be the name of the first uri param, which in theory should always be one of the Navbar states (also a string)
+ */
+function navState() {
+  const currentUriPath = window.location.pathname.split('/')[1];
+  if(currentUriPath === "") return "home"; // home path is just "/" so we need to return str "home" for navigationValue
+  return currentUriPath;
+}
+
 export default function() {
-  const [ navigationValue, setNavigationValue ] = useState('home');
+  const [ navigationValue, setNavigationValue ] = useState(navState());
 
   const navActionStyles = {
     color: "white",
