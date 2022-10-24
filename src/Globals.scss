@@ -44,6 +44,11 @@ html {
   src: local('./fonts/Gruppo-Regular.ttf'), url('./fonts/Gruppo-Regular.ttf') format('truetype');
 }
 
+#TopLogo {
+  padding: .5rem 1rem;
+  padding-top: .75rem; 
+}
+
 
 // Global Classes
 .strip-anchor-styles {

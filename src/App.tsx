@@ -13,13 +13,21 @@ import ProjectPage from './Views/Projects/ProjectPage';
 // Libraries
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export default function App() {
+const TopLogo = () => {
+  return (
+    <div id="TopLogo">
+      <img src="/src/img/logo.svg" alt="logo" />
+    </div>
+  )
+}
 
+export default function App() {
   //TODO: a scroll-to-top function passed to all views
 
   return (
    <>
     <BrowserRouter>
+      <TopLogo />
       <Navbar/>
       <Routes>
           <Route path='/'               element={<HomeMain />} />
