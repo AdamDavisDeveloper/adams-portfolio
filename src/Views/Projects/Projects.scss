@@ -1,0 +1,17 @@
+#Projects {
+    min-height: 100vh;
+    color: white;
+    width: 78%;
+    margin: auto;
+    padding-top: var(--page-padding-top);
+    padding-bottom: var(--page-padding-bottom);
+
+    header {
+        h1 { 
+            font-family: 'Gruppo', sans-serif; 
+            font-size: 2.5rem;
+            color: white;
+            text-align: center;
+        }
+    }
+}

@@ -1,14 +1,21 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import './Projects.scss';
 
+import ProjectsData, {projectTileTypes} from "./ProjectsData";
 
-const ProjectTile = (props: {
-    title           :string,
-    description     :string,
-    urlSlug         :string,
-    imagePath?      :string,
-    tags?           :[{name: string, color: string}]
+const ProjectTag = (props: {
+    name: string,
+    color: string
 }) => {
+    return (
+        <div className="project-tag" style={{background: props.color}}>
+            <span>{props.name}</span>
+        </div>
+    )
+}
+
+const ProjectTile = (props: projectTileTypes) => {
     return (
         <div className="project-tile">
             {
@@ -24,6 +31,18 @@ const ProjectTile = (props: {
                         <span>{props.title}</span>
                         <img src="ArrowImage.svg" alt="arrow pointing up and right" />
                     </div>
+                    <div className="info-bottom-row">
+                        <span>{props.description}</span>
+                        
+                        {props.tags && 
+                        <div className="tags">
+                            {
+                                props.tags.map((tag) => (
+                                    <ProjectTag name={tag.name} color={tag.color} />
+                                ))
+                            }
+                        </div>}
+                    </div>
                 </div>
             </Link>
         </div>
@@ -32,6 +51,24 @@ const ProjectTile = (props: {
 
 export default function(props) {
     return (
-        <h1>Projects</h1>
+        <div id="Projects">
+            <header>
+                <h1>New Projects</h1>
+            </header>
+
+            {
+                ProjectsData.map((project) => (
+                    <ProjectTile 
+                        title={project.title}
+                        description={project.description}
+                        imagePath={project.imagePath}
+                        urlSlug={project.urlSlug}
+                        tags={project.tags}
+                    />
+                ))
+            }
+
+        </div>
+
     )
 }
