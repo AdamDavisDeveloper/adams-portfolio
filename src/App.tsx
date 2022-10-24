@@ -14,6 +14,9 @@ import ProjectPage from './Views/Projects/ProjectPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
+
+  //TODO: a scroll-to-top function passed to all views
+
   return (
    <>
     <BrowserRouter>
