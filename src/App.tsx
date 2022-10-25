@@ -33,7 +33,7 @@ export default function App() {
           <Route path='/'               element={<HomeMain />} />
 
           <Route path="projects"        element={<Projects />} />
-          <Route path="projects/:slug"  element={<ProjectPage />} />
+          <Route path="projects/:project_name"  element={<ProjectPage />} />
 
           <Route path="about"           element={<AboutMe />} />
       </Routes>
