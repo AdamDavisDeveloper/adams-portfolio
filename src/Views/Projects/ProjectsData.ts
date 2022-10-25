@@ -18,7 +18,7 @@ const tags = {
     learning:   {name: "Learning",      color: "#315E4B"}
 }
 
-const ProjectData: projectTileTypes[] = [
+export const ProjectTileData: projectTileTypes[] = [
     {
         title: "Professional Portfolio",
         description: "wow, you're on this website right now!",
@@ -42,4 +42,43 @@ const ProjectData: projectTileTypes[] = [
     }
 ]
 
-export default ProjectData;
+export const ProjectData = [
+    // the "id" MUST be same as project tile urlSlug for filtering
+    // first one leave blank to keep find method from failing w/ undefined
+    {
+        id: "leave blank and index 0",
+        title: "",
+        subtitle: "",
+        writeUp: "",
+        liveURL: "",
+        github: "",
+        sections: [
+            {
+                text: "",
+                imgPath: ""
+            },
+        ]
+    },
+    {
+        id: "korean-flashcards",
+        title: "Korean Flashcards",
+        subtitle: "Generated flash cards to help you study Sino and Native Korean numbers",
+        writeUp: "",
+        liveURL: "",
+        github: "",
+        sections: [
+            {
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
+                imgPath: "/src/img/project/korean-numbers-01"
+            },
+            {
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
+                imgPath: "/src/img/project/korean-numbers-02"
+            },
+            {
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
+                imgPath: "/src/img/project/korean-numbers-03"
+            },
+        ]
+    }
+]

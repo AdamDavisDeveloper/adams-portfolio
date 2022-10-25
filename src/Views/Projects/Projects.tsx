@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import './Projects.scss';
 
-import ProjectsData, {projectTileTypes} from "./ProjectsData";
+import {ProjectTileData, projectTileTypes} from "./ProjectsData";
 
 const ProjectTag = (props: {
     name: string,
@@ -49,7 +49,7 @@ const ProjectTile = (props: projectTileTypes) => {
     )
 }
 
-export default function(props) {
+export default function() {
     return (
         <div id="Projects">
             <header>
@@ -57,7 +57,7 @@ export default function(props) {
             </header>
 
             {
-                ProjectsData.map((project, i) => (
+                ProjectTileData.map((project, i) => (
                     <ProjectTile 
                         key={i}
                         title={project.title}
