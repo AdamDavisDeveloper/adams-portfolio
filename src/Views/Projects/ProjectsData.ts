@@ -21,7 +21,7 @@ const tags = {
 const ProjectData: projectTileTypes[] = [
     {
         title: "Professional Portfolio",
-        description: "hey look, you're on this website right now!",
+        description: "wow, you're on this website right now!",
         urlSlug: "this-website",
         imagePath: "",
         tags: [ tags.javascript, tags.generative, tags.algorithm ],
