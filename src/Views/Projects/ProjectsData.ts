@@ -64,20 +64,20 @@ export const ProjectData = [
         title: "Korean Flashcards",
         subtitle: "Generated flash cards to help you study Sino and Native Korean numbers",
         writeUp: "",
-        liveURL: "",
-        github: "",
+        liveURL: "https://learn-korean-numbers.netlify.app/",
+        github: "https://github.com/AdamDavisDeveloper/learn-korean-numbers",
         sections: [
             {
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
-                imgPath: "/src/img/project/korean-numbers-01"
+                imgPath: "/src/img/project/korean-numbers-01.png"
             },
             {
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
-                imgPath: "/src/img/project/korean-numbers-02"
+                imgPath: "/src/img/project/korean-numbers-02.png"
             },
             {
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
-                imgPath: "/src/img/project/korean-numbers-03"
+                imgPath: "/src/img/project/korean-numbers-03.png"
             },
         ]
     }

@@ -6,51 +6,50 @@
     margin: auto;
     padding-top: var(--page-padding-top);
     padding-bottom: var(--page-padding-bottom);
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 100%;
-
-    color: var(--highlight-text);
-
-    img { width: 100%; }
-
-    .header-text {
-        width: 100%;
+    header {
         display: flex;
-        justify-content: space-between;   
-        align-items: flex-end; 
-        span {
-            font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
-            &:not(.name) { font-size: .75rem; }
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+    
+        color: var(--highlight-text);
+    
+        img { width: 100%; }
+    
+        .header-text {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;   
+            align-items: flex-end; 
+            span {
+                font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
+                &:not(.name) { font-size: .75rem; }
+            }
+        }
+        .name { 
+            font-size: 1.5rem;
+            margin-bottom: .15rem;
+         }
+    }
+    
+    #TitleDescription {
+        font-family: 'Gruppo', sans-serif;
+        h1 {
+            font-size: 1.25rem;
+            color: var(--white);
+            line-height: 28px;
         }
     }
-    .name { 
-        font-size: 1.5rem;
-        margin-bottom: .15rem;
-     }
-}
-
-#TitleDescription {
-    font-family: 'Gruppo', sans-serif;
-    h1 {
-        font-size: 1.25rem;
-        color: var(--white);
-        line-height: 28px;
-    }
-}
-
-#FeaturedList {
-    margin-top: 1rem;
-    span {
-        display: block;
-        font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
-        font-weight: 100;
-        color: var(--white);
-        margin-bottom: .25rem;
+    
+    #FeaturedList {
+        margin-top: 1rem;
+        span {
+            display: block;
+            font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
+            font-weight: 100;
+            color: var(--white);
+            margin-bottom: .25rem;
+        }
     }
 }

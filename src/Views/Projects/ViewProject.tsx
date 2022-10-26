@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Link, useParams } from 'react-router-dom';
-
 import { ProjectData } from "./ProjectsData";
+import './ViewProject.scss';
 
 /**
  * 
@@ -28,6 +28,33 @@ function getProjectData(param: any) {
     return ProjectData.find((project) => project.id === param) || ProjectData[0];
 }
 
+const Section = (props: {
+    leftOrientation: boolean,
+    text: string,
+    imgPath: string
+}) => {
+    // TODO: this sucks and it's not DRY. Gotta replace this.
+    if(props.leftOrientation) {
+        return (
+            <section className="left-oriented">
+                <div className="img-wrapper"><img src={props.imgPath} alt="screenshot of the project" /></div>
+                <div className="text-wrapper">
+                    <p>{props.text}</p>
+                </div>
+            </section>
+        )
+    } else {
+        return (
+            <section>
+                <div className="text-wrapper">
+                    <p>{props.text}</p>
+                </div>
+                <div className="img-wrapper"><img src={props.imgPath} alt="screenshot of the project" /></div>
+            </section>   
+        )
+    }
+}
+
 export default function() {
     const { project_name } = useParams();
     const projectData = getProjectData(project_name);
@@ -35,9 +62,37 @@ export default function() {
     return (
         <div id="ProjectPage">
             <header>
-                <h1>{projectData.title}</h1>
-                <span>{projectData.subtitle}</span>
+                <h1>{ projectData.title }</h1>
+                <span>{ projectData.subtitle }</span>
             </header>
+
+            {
+                projectData.sections.map((section, i) => (
+                    <Section 
+                        leftOrientation={i % 2 == 0 ? true : false} //left orient every other
+                        text={section.text}
+                        imgPath={section.imgPath}
+                    />)
+                )
+            }
+
+            <div id="ButtonsRow">
+                <Link to="/projects">
+                    <button className="back-btn">Back</button>
+                </Link>
+                {
+                    projectData.liveURL &&
+                    <a href={projectData.liveURL}>
+                        <button>Live Site</button>
+                    </a>
+                }
+                {
+                    projectData.github &&
+                    <a href={projectData.github}>
+                        <button>Github</button>
+                    </a>
+                }
+            </div>
         </div>
     )
 }

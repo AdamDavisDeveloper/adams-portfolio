@@ -1,0 +1,63 @@
+#ProjectPage {
+    min-height: 100vh;
+    color: white;
+    width: 78%;
+    margin: auto;
+    padding-top: var(--page-padding-top);
+    padding-bottom: var(--page-padding-bottom);
+
+    header {
+        color: white;
+        text-align: left;
+        margin-bottom: 2rem;
+        span {
+            font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    section {
+        margin-bottom: 2rem;
+        display: flex;
+        .img-wrapper {
+            flex: 1;
+        }
+        .text-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        p {
+            font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
+            padding: .75rem;
+        }
+    }
+
+    #ButtonsRow {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        a {
+            cursor: pointer;
+        }
+        button {
+            font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
+            font-size: 1.15rem;
+            border: none;
+            border-radius: 5px;
+            padding: .25rem 1rem;
+            color: white;
+            // margin: 0rem .5rem;
+            background: #2F4858;
+        }
+        .back-btn {
+            background: #A06078;
+        }
+    }
+}
