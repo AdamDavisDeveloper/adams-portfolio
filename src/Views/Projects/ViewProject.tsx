@@ -72,6 +72,8 @@ export default function() {
     const { project_name } = useParams();
     const projectData = getProjectData(project_name);
 
+    //TODO: have this redirect to a 404 page
+    if(!projectData.id) return <></>;
     return (
         <div id="ProjectPage">
             <header>

@@ -56,7 +56,7 @@ export const ProjectData = [
     // the "id" MUST be same as project tile urlSlug for filtering
     // first one leave blank to keep find method from failing w/ undefined
     {
-        id: "leave blank and index 0",
+        id: "",
         title: "",
         subtitle: "",
         writeUp: "",
