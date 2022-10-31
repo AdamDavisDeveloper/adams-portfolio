@@ -55,6 +55,19 @@ const Section = (props: {
     }
 }
 
+const TechnologyLogo = (props: {
+    name: string,
+    image: string
+}) => {
+
+    return (
+        <div className="technology-logo-wrapper">
+            <img src={props.image} alt={`logo of ${props.name}`} />
+            <span>{props.name}</span>
+        </div>
+    )
+}
+
 export default function() {
     const { project_name } = useParams();
     const projectData = getProjectData(project_name);
@@ -75,6 +88,15 @@ export default function() {
                     />)
                 )
             }
+
+            <h2>Technologies Used</h2>
+            <div id="TechnologiesRow">
+                {
+                    projectData.technologies.map((tech) => {
+                        return <TechnologyLogo name={tech.name} image={tech.image} />
+                    })
+                }
+            </div>
 
             <div id="ButtonsRow">
                 <Link to="/projects">

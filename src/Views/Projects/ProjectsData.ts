@@ -18,6 +18,16 @@ const tags = {
     learning:   {name: "Learning",      color: "#315E4B"}
 }
 
+const technologies = {
+    react:          {name: "React",         image: "/src/img/logos/react.png"},
+    vite:           {name: "Vite",          image: "/src/img/logos/vite.png"},
+    html:           {name: "HTML",          image: "/src/img/logos/html.png"},
+    scss:           {name: "SCSS",          image: "/src/img/logos/scss.png"},
+    python:         {name: "Python",        image: "/src/img/logos/python.png"},
+    javascript:     {name: "JavaScript",    image: "/src/img/logos/javascript.png"},
+    typescript:     {name: "TypeScript",    image: "/src/img/logos/typescript.png"},
+}
+
 export const ProjectTileData: projectTileTypes[] = [
     {
         title: "Professional Portfolio",
@@ -57,7 +67,8 @@ export const ProjectData = [
                 text: "",
                 imgPath: ""
             },
-        ]
+        ],
+        technologies: []
     },
     {
         id: "korean-flashcards",
@@ -79,6 +90,7 @@ export const ProjectData = [
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
                 imgPath: "/src/img/project/korean-numbers-03.png"
             },
-        ]
+        ],
+        technologies: [ technologies.vite, technologies.typescript, technologies.react ]
     }
 ]
