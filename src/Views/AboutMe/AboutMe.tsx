@@ -22,7 +22,7 @@ export default function AboutMe() {
         <div id="AboutMe">
             <header>
                 <h1>About Me</h1>
-                <img src={'/src/img/book.svg'} alt="An open book with a star hovering above it" />
+                <img src={'/src/img/about-me.png'} alt="A man standing in front of a starry sky backdrop" />
             </header>
 
             <div id="TextBody">
