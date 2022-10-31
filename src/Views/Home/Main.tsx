@@ -33,7 +33,7 @@ export default function HomeMain() {
                             key={i}
                             title={project.title}
                             description={project.description}
-                            url={project.url}
+                            slug={project.urlSlug}
                         />
                     )
                 )}

@@ -5,17 +5,19 @@ import ExternalLinkSVG from '/src/img/external-link.svg';
 //Styles
 import '../Home/FeaturedCard.scss'
 
+import {Link} from 'react-router-dom'
+
 export default function FeaturedCard(props: {
     title: string,
     description: string,
-    url: string,
+    slug: string,
 }) {
 
-    const { title, description, url } = props; //destruct props
+    const { title, description, slug } = props; //destruct props
 
     return (
         <>
-            <a href={url} className="strip-anchor-styles">
+            <Link to={`projects/${slug}`} className="strip-anchor-styles">
                 <div className="featured-card">
                     <div className="top-row">
                         <h1>{title}</h1>
@@ -26,7 +28,7 @@ export default function FeaturedCard(props: {
                         <p>{description}</p>
                     </div>
                 </div>      
-            </a>
+            </Link>
         </>
     )
 }
