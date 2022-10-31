@@ -3,6 +3,7 @@
 #HomeMain {
     min-height: 100vh;
     width: 78%;
+    max-width: 30rem;
     margin: auto;
     padding-top: var(--page-padding-top);
     padding-bottom: var(--page-padding-bottom);
@@ -50,6 +51,27 @@
             font-weight: 100;
             color: var(--white);
             margin-bottom: .25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 663px) {
+    #HomeMain {
+        header {
+            .header-text {
+                span {
+                    &:not(.name) { font-size: 1rem; }
+                }
+                .name { font-size: 1.75rem; }
+            }
+        }
+        #TitleDescription {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        #FeaturedList {
+            span, p { font-size: 1rem; }
         }
     }
 }
