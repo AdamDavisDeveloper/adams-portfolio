@@ -1,6 +1,6 @@
 import React from "react"
 //@ts-ignore -- TS doesn't recognize this as a "module" (jerk)
-import HomeImage from '/src/img/header-home.png';
+import HomeImage from '/src/img/header-home-lg.png';
 import './Main.scss';
 
 //Featured Projects Array
