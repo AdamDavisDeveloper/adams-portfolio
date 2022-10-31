@@ -2,7 +2,7 @@ import React from "react"
 
 // Images (these ts-ignores are the death of me)
 //@ts-ignore
-import Book from '/src/img/book.svg';
+import AboutMeImg from '/src/img/about-me.png';
 //@ts-ignore
 import ReactLogo from '/src/img/react-logo.png'
 //@ts-ignore
@@ -22,7 +22,7 @@ export default function AboutMe() {
         <div id="AboutMe">
             <header>
                 <h1>About Me</h1>
-                <img src={'/src/img/about-me.png'} alt="A man standing in front of a starry sky backdrop" />
+                <img src={AboutMeImg} alt="A man standing in front of a starry sky backdrop" />
             </header>
 
             <div id="TextBody">

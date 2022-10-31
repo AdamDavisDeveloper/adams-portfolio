@@ -41,10 +41,12 @@
     .info-bottom-row {
         span {
             font-size: 1rem;
-            font-family: 'FiraSansExtraCondensed-Light';
+            font-family: 'Fira Sans Extra Condensed';
+            font-weight: 300;
             &:not(.tag-text) { 
                 display: block;
-                font-family: 'FiraSansExtraCondensed-ExtraLight';
+                font-family: 'Fira Sans Extra Condensed';
+                font-weight: 200;
                 color: #f8f8f87c;
                 margin-bottom: .5rem;
             }

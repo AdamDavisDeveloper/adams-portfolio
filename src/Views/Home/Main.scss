@@ -24,7 +24,7 @@
             justify-content: space-between;   
             align-items: flex-end; 
             span {
-                font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
+                font-family: 'Fira Sans Extra Condensed', sans-serif;
                 &:not(.name) { font-size: .75rem; }
             }
         }
@@ -47,8 +47,8 @@
         margin-top: 1rem;
         span {
             display: block;
-            font-family: 'FiraSansExtraCondensed-ExtraLight', sans-serif;
-            font-weight: 100;
+            font-family: 'Fira Sans Extra Condensed', sans-serif;
+            font-weight: 200;
             color: var(--white);
             margin-bottom: .25rem;
         }
