@@ -4,6 +4,9 @@ import './Globals.scss';
 // NavBar
 import Navbar from './Navbar';
 
+//@ts-ignore
+import TopLogoImg from '/src/img/logo.svg';
+
 // Views
 import HomeMain from './Views/Home/Main';
 import AboutMe from './Views/AboutMe/AboutMe';
@@ -16,7 +19,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const TopLogo = () => {
   return (
     <div id="TopLogo">
-      <img src="/src/img/logo.svg" alt="logo" />
+      <img src={TopLogoImg} alt="logo" />
     </div>
   )
 }
