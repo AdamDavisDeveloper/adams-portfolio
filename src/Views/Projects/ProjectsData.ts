@@ -34,7 +34,7 @@ const tags = {
     learning:   {name: "Learning",      color: "#315E4B"}
 }
 
-const technologies = {
+export const technologies = {
     react:          {name: "React",         image: ReactLogo},
     vite:           {name: "Vite",          image: ViteLogo},
     html:           {name: "HTML",          image: HtmlLogo},
@@ -42,7 +42,7 @@ const technologies = {
     python:         {name: "Python",        image: PythonLogo},
     javascript:     {name: "JavaScript",    image: JavascriptLogo},
     typescript:     {name: "TypeScript",    image: TypescriptLogo},
-    firebase:       {name: "TypeScript",    image: FirebaseLogo},
+    firebase:       {name: "Firebase",      image: FirebaseLogo},
 }
 
 export const ProjectTileData: projectTileTypes[] = [

@@ -1,21 +1,20 @@
 import React from "react"
+import { technologies } from '../Projects/ProjectsData';
+import TechnologyLogo from "../../components/TechnologyLogo";
 
 // Images (these ts-ignores are the death of me)
 //@ts-ignore
 import AboutMeImg from '/src/img/about-me.png';
-//@ts-ignore
-import ReactLogo from '/src/img/react-logo.png'
-//@ts-ignore
-import ViteLogo from '/src/img/vite-logo.png'
-//@ts-ignore
-import TypescriptLogo from '/src/img/typescript-logo.png'
-//@ts-ignore
-import PythonLogo from '/src/img/python-logo.png'
-//@ts-ignore
-import FigmaLogo from '/src/img/figma-logo.png'
 
 //Styles
 import './AboutMe.scss';
+
+const prefferedTools = [
+    technologies.typescript,
+    technologies.react,
+    technologies.vite,
+    technologies.firebase
+]
 
 export default function AboutMe() {
     return (
@@ -30,13 +29,9 @@ export default function AboutMe() {
             </div>
 
             <div id="TechnologyList">
-                <span>My preferred <span>tools</span></span>
+                <span className="colored-text">A few favorite <span>tools</span></span>
                 <div className="logos-list">
-                    <img src="/src/img/react-logo.png" alt="react logo" />
-                    <img src="/src/img/vite-logo.png" alt="vite logo" />
-                    <img src="/src/img/typescript-logo.png" alt="typescript logo" />
-                    <img src="/src/img/python-logo.png" alt="python logo" />
-                    <img src="/src/img/figma-logo.png" alt="figma logo" />
+                    { prefferedTools.map((tool) => ( <TechnologyLogo name={tool.name} image={tool.image} /> )) }
                 </div>
             </div>
         </div>

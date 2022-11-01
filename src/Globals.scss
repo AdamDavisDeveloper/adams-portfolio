@@ -6,7 +6,7 @@
 
     //Sizes
     --page-padding-top: 1rem;
-    --page-padding-bottom: 4.5rem;
+    --page-padding-bottom: 7rem;
 }
 
 * {
@@ -37,9 +37,16 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  img {
+    margin-bottom: .5rem;
+  }
   span {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-weight: 200;
     color: rgba(255, 255, 255, 0.6);
   }
+}
+
+.colored-text {
+  color: var(--highlight-text);
 }

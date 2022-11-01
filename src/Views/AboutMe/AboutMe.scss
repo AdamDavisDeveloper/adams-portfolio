@@ -39,8 +39,9 @@
         margin-top: 3rem;
         span {
             font-size: 1rem;
-            color: var(--highlight-text);
-            span { color: white }
+            &:not(.colored-text) {
+                color: white;
+            }
         }
     }
 

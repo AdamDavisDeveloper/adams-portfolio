@@ -2,22 +2,8 @@ import React from "react";
 
 import { Link, useParams } from 'react-router-dom';
 import { ProjectData } from "./ProjectsData";
+import TechnologyLogo from "../../components/TechnologyLogo";
 import './ViewProject.scss';
-
-/**
- * 
- * @depricated We no longer need this but keeping it around 4 now 
- * @returns String
- */
-function formatQueryParamName(param: any) {
-    var formatted = ""
-    let strArr = param.split("-");
-    strArr = strArr.filter((str) => str !== "-");
-    strArr.forEach((str) => {
-        formatted += `${str.toUpperCase()} `;
-    });
-    return formatted;
-}
 
 /**
  * 
@@ -53,19 +39,6 @@ const Section = (props: {
             </section>   
         )
     }
-}
-
-const TechnologyLogo = (props: {
-    name: string,
-    image: string
-}) => {
-
-    return (
-        <div className="technology-logo-wrapper">
-            <img src={props.image} alt={`logo of ${props.name}`} />
-            <span>{props.name}</span>
-        </div>
-    )
 }
 
 export default function() {
