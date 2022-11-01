@@ -1,3 +1,19 @@
+// Image imports for Vite build
+//@ts-ignore
+import ReactLogo from '/src/img/logos/react.png';           //@ts-ignore
+import ViteLogo from '/src/img/logos/vite.png';             //@ts-ignore
+import HtmlLogo from '/src/img/logos/html.png';             //@ts-ignore
+import ScssLogo from '/src/img/logos/scss.png';             //@ts-ignore
+import PythonLogo from '/src/img/logos/python.png';         //@ts-ignore
+import FirebaseLogo from '/src/img/logos/firebase.png';     //@ts-ignore
+import JavascriptLogo from '/src/img/logos/javascript.png'; //@ts-ignore
+import TypescriptLogo from '/src/img/logos/typescript.png'; //@ts-ignore
+
+// Korean Numbers Project
+import KoreanNumbers_One from '/src/img/project/korean-numbers-01.png';     //@ts-ignore
+import KoreanNumbers_Two from '/src/img/project/korean-numbers-01.png';     //@ts-ignore
+import KoreanNumbers_Three from '/src/img/project/korean-numbers-03.png';   //@ts-ignore
+
 interface projectTag {
     name: string, 
     color: string
@@ -19,13 +35,14 @@ const tags = {
 }
 
 const technologies = {
-    react:          {name: "React",         image: "/src/img/logos/react.png"},
-    vite:           {name: "Vite",          image: "/src/img/logos/vite.png"},
-    html:           {name: "HTML",          image: "/src/img/logos/html.png"},
-    scss:           {name: "SCSS",          image: "/src/img/logos/scss.png"},
-    python:         {name: "Python",        image: "/src/img/logos/python.png"},
-    javascript:     {name: "JavaScript",    image: "/src/img/logos/javascript.png"},
-    typescript:     {name: "TypeScript",    image: "/src/img/logos/typescript.png"},
+    react:          {name: "React",         image: ReactLogo},
+    vite:           {name: "Vite",          image: ViteLogo},
+    html:           {name: "HTML",          image: HtmlLogo},
+    scss:           {name: "SCSS",          image: ScssLogo},
+    python:         {name: "Python",        image: PythonLogo},
+    javascript:     {name: "JavaScript",    image: JavascriptLogo},
+    typescript:     {name: "TypeScript",    image: TypescriptLogo},
+    firebase:       {name: "TypeScript",    image: FirebaseLogo},
 }
 
 export const ProjectTileData: projectTileTypes[] = [
@@ -80,17 +97,17 @@ export const ProjectData = [
         sections: [
             {
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
-                imgPath: "/src/img/project/korean-numbers-01.png"
+                imgPath: KoreanNumbers_One,
             },
             {
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
-                imgPath: "/src/img/project/korean-numbers-02.png"
+                imgPath: KoreanNumbers_Two
             },
             {
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut perspiciatis odit ad veritatis.",
-                imgPath: "/src/img/project/korean-numbers-03.png"
+                imgPath: KoreanNumbers_Three
             },
         ],
-        technologies: [ technologies.vite, technologies.typescript, technologies.react ]
+        technologies: [ technologies.html, technologies.scss, technologies.javascript ]
     }
 ]

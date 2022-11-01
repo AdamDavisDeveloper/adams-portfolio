@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import './Projects.scss';
 
+//Images
+//@ts-ignore -- TS doesn't recognize this as a "module" (jerk)
+import ArrowCircle from '/src/img/arrow-up-circle.svg';
+
 import {ProjectTileData, projectTileTypes} from "./ProjectsData";
 
 const ProjectTag = (props: {
@@ -29,7 +33,7 @@ const ProjectTile = (props: projectTileTypes) => {
                 <div className="project-tile-info">
                     <div className="info-top-row">
                         <span>{props.title}</span>
-                        <img src="/src/img/arrow-up-circle.svg" alt="arrow pointing up and right" />
+                        <img src={ArrowCircle} alt="arrow pointing up and right" />
                     </div>
                     <div className="info-bottom-row">
                         <span>{props.description}</span>
