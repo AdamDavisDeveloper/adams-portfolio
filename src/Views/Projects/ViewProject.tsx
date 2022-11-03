@@ -64,6 +64,13 @@ export default function() {
                 )
             }
 
+            {
+                projectData.writeUp &&
+                <div id="WriteUp">
+                    <p>{projectData.writeUp}</p>
+                </div>
+            }
+
             <h2>Technologies Used</h2>
             <div id="TechnologiesRow">
                 {
