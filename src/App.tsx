@@ -1,8 +1,9 @@
 import React from 'react';
 import './Globals.scss';
 
-// NavBar
+// Components
 import Navbar from './Navbar';
+import ScrollToTop from './utils/ScrollToTop';
 
 //@ts-ignore
 import TopLogoImg from '/src/img/logo.svg';
@@ -25,21 +26,21 @@ const TopLogo = () => {
 }
 
 export default function App() {
-  //TODO: a scroll-to-top function passed to all views
-
   return (
    <>
     <BrowserRouter>
-      <TopLogo />
-      <Navbar/>
-      <Routes>
-          <Route path='/'                       element={<HomeMain />} />
+      <ScrollToTop>
+        <TopLogo />
+        <Navbar/>
+        <Routes>
+            <Route path='/'                       element={<HomeMain />} />
 
-          <Route path="projects"                element={<Projects />} />
-          <Route path="projects/:project_name"  element={<ProjectPage />} />
+            <Route path="projects"                element={<Projects />} />
+            <Route path="projects/:project_name"  element={<ProjectPage />} />
 
-          <Route path="about"                   element={<AboutMe />} />
-      </Routes>
+            <Route path="about"                   element={<AboutMe />} />
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
    </>
   );
