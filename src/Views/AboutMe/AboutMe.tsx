@@ -9,7 +9,7 @@ import AboutMeImg from '/src/img/about-me.png';
 //Styles
 import './AboutMe.scss';
 
-const prefferedTools = [
+const favoriteTools = [
     technologies.typescript,
     technologies.react,
     technologies.vite,
@@ -31,7 +31,7 @@ export default function AboutMe() {
             <div id="TechnologyList">
                 <span className="colored-text">A few favorite <span>tools</span></span>
                 <div className="logos-list">
-                    { prefferedTools.map((tool) => ( <TechnologyLogo name={tool.name} image={tool.image} /> )) }
+                    { favoriteTools.map((tool) => ( <TechnologyLogo name={tool.name} image={tool.image} /> )) }
                 </div>
             </div>
         </div>
