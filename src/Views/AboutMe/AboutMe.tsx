@@ -13,7 +13,8 @@ import FactCheckIcon from '@mui/icons-material/FactCheck';
 
 // Images (these ts-ignores are the death of me)
 //@ts-ignore
-import AboutMeImg from '/src/img/about-me.png';
+import AboutMeImg from '/src/img/about-me.png'; //@ts-ignore
+import Resume from '/src/img/AdamDavisResume-2022.pdf';
 
 //Styles
 import './AboutMe.scss';
@@ -49,7 +50,7 @@ export default function AboutMe() {
                         Github
                     </Fab>
                 </a>
-                <a href="/src/img/AdamDavisResume-2022.pdf" target="_blank">
+                <a href={Resume} target="_blank">
                     <Fab sx={{marginRight: "1rem", marginBottom: "1rem"}} variant="extended" size="medium">
                         <FactCheckIcon sx={{ mr: 1 }} />
                         Resume
