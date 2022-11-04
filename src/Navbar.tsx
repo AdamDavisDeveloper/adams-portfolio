@@ -32,7 +32,7 @@ export default function() {
   }
 
     return (
-      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 3000 }} elevation={3}>
         <BottomNavigation
           sx={{
             background: "#1a1a23",
