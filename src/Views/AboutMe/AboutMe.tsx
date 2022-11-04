@@ -25,7 +25,12 @@ export default function AboutMe() {
             </header>
 
             <div id="TextBody">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur iste dolor dolorem, recusandae modi quae eaque, deserunt facere odit delectus suscipit? Perspiciatis eum placeat voluptates delectus iure pariatur nihil consequuntur.</p>
+                <p>
+                    🙌🏼 I'm Adam Davis. Thank you for visiting my little slice of the web and I hope you enjoy your time here. 🥳 <br />
+                    I am a software engineer and designer primarily working on web projects but I love playing around with all types of tech and making pretty much anything (I've even tried knitting!). <br />
+                    Playing music, exploring nature, learning new things about the world, and creating are my favorite things and I hope to continue doing them for a long time. <br />
+                    Detailed information about my professional experience is contained in my resume or on LinkedIn 👇🏻
+                </p>
             </div>
 
             <div id="TechnologyList">
