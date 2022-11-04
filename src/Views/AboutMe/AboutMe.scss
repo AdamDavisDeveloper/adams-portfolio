@@ -35,6 +35,14 @@
         }
     }
 
+    #OutLinks {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 2rem 0rem;
+    }
+
     #TechnologyList {
         margin-top: 3rem;
         span {

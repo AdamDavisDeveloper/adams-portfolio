@@ -2,6 +2,15 @@ import React from "react"
 import { technologies } from '../Projects/ProjectsData';
 import TechnologyLogo from "../../components/TechnologyLogo";
 
+// MUI
+import {
+    Fab
+} from '@mui/material';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
+
 // Images (these ts-ignores are the death of me)
 //@ts-ignore
 import AboutMeImg from '/src/img/about-me.png';
@@ -31,6 +40,34 @@ export default function AboutMe() {
                     Playing music, exploring nature, learning new things about the world, and creating are my favorite things and I hope to continue doing them for a long time. <br />
                     Detailed information about my professional experience is contained in my resume or on LinkedIn 👇🏻
                 </p>
+            </div>
+
+            <div id="OutLinks">
+                <a href="https://github.com/AdamDavisDeveloper" target="_blank">
+                    <Fab sx={{marginRight: "1rem", marginBottom: "1rem"}} variant="extended" size="medium">
+                        <GitHubIcon sx={{ mr: 1 }} />
+                        Github
+                    </Fab>
+                </a>
+                <a href="/src/img/AdamDavisResume-2022.pdf" target="_blank">
+                    <Fab sx={{marginRight: "1rem", marginBottom: "1rem"}} variant="extended" size="medium">
+                        <FactCheckIcon sx={{ mr: 1 }} />
+                        Resume
+                    </Fab>
+                </a>
+                <a href="https://www.linkedin.com/in/adam-davis-developer" target="_blank">
+                    <Fab sx={{marginRight: "1rem", marginBottom: "1rem"}} variant="extended" size="medium">
+                        <LinkedInIcon sx={{ mr: 1 }} />
+                        LinkedIn
+                    </Fab>
+                </a>
+                <a href="https://adamsblog.hashnode.dev" target="_blank">
+                    <Fab sx={{marginRight: "1rem", marginBottom: "1rem"}} variant="extended" size="medium">
+                        <RssFeedIcon sx={{ mr: 1 }} />
+                        Blog
+                    </Fab>
+                </a>
+
             </div>
 
             <div id="TechnologyList">
