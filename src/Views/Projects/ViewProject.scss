@@ -38,6 +38,7 @@
             font-family: 'Fira Sans Extra Condensed', sans-serif;
             font-weight: 200;
             padding: .75rem;
+            font-size: 1.15rem;
         }
     }
 
@@ -72,6 +73,7 @@
     
     p {
         font-weight: 200;
+        font-size: 1.25rem;
         line-height: 25px;
     }
 }
@@ -84,4 +86,8 @@
     div {
         margin-right: 1rem;
     }
+}
+
+@media screen and (max-width: 455px) {
+    #ProjectPage { width: 90% }
 }

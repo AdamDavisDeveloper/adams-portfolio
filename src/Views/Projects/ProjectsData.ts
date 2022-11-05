@@ -1,4 +1,4 @@
-// Image imports for Vite build
+// -------- Image imports for Vite build -------- //
 //@ts-ignore
 import ReactLogo from '/src/img/logos/react.png';           //@ts-ignore
 import ViteLogo from '/src/img/logos/vite.png';             //@ts-ignore
@@ -10,9 +10,12 @@ import JavascriptLogo from '/src/img/logos/javascript.png'; //@ts-ignore
 import TypescriptLogo from '/src/img/logos/typescript.png'; //@ts-ignore
 
 // Korean Numbers Project
-import KoreanNumbers_One from '/src/img/project/korean-numbers-01.png';     //@ts-ignore
-import KoreanNumbers_Two from '/src/img/project/korean-numbers-02.png';     //@ts-ignore
-import KoreanNumbers_Three from '/src/img/project/korean-numbers-03.png';   //@ts-ignore
+import KoreanNumbers_Image_01 from '/src/img/project/korean-numbers-01.png';    //@ts-ignore
+import KoreanNumbers_Image_02 from '/src/img/project/korean-numbers-02.png';    //@ts-ignore
+import KoreanNumbers_Image_03 from '/src/img/project/korean-numbers-03.png';    //@ts-ignore
+// See Something New Project
+import SomethingNew_Image_01 from '/src/img/project/something-new-01.png';
+// -------- End image imports -------- //
 
 interface projectTag {
     name: string, 
@@ -47,13 +50,13 @@ export const technologies = {
 }
 
 export const ProjectTileData: projectTileTypes[] = [
-    {
-        title: "Professional Portfolio",
-        description: "wow, you're on this website right now!",
-        urlSlug: "this-website",
-        imagePath: "",
-        tags: [ tags.typescript, tags.generative, tags.algorithm ],
-    },
+    // {
+    //     title: "Professional Portfolio",
+    //     description: "wow, you're on this website right now!",
+    //     urlSlug: "this-website",
+    //     imagePath: "",
+    //     tags: [ tags.typescript, tags.generative, tags.algorithm ],
+    // },
     {
         title: "See Something New",
         description: "guaranteed to be shown what no one has ever seen or will see again.",
@@ -89,6 +92,21 @@ export const ProjectData = [
         technologies: []
     },
     {
+        id: "see-something-new",
+        title: "See Something New",
+        subtitle: "Guaranteed to be shown what no one has ever seen or will see again.",
+        writeUp: "When you refresh the image, you have a possibility, regardless of how slim, of seeing a picture of anything in existence (even a photo of you shaking hands with Mr. Rogers!). You are looking at something which has statistically never been viewed by any human in all of history or will ever see throughout the life of the universe. There is a 1 in (1.5252803... x 10^1155955) chance of any one image being shown to you. I wrote a compact script to create the 400 rows and fill each row with 400 colored divs. The idea came to me while considering the sqaure tiles covering the walls in my office restroom.",
+        liveURL: "https://see-something-new.netlify.app/",
+        github: "https://github.com/AdamDavisDeveloper/see-something-new",
+        sections: [
+            {
+                text: "Javascript algorithm creates 160,000 1x1px divs with randomly set hex code colors (16,777,216 color possibilities per pixel) in a 400x400px square.",
+                imgPath: SomethingNew_Image_01,
+            },
+        ],
+        technologies: [ technologies.html, technologies.scss, technologies.javascript ]
+    },
+    {
         id: "korean-flashcards",
         title: "Korean Flashcards",
         subtitle: "Generated flash cards to help you study Sino and Native Korean numbers",
@@ -98,15 +116,15 @@ export const ProjectData = [
         sections: [
             {
                 text: "A flashcard is shown with a Korean number written on the front. The integer is chosen at random from 1-9999 and my algorithm uses the Korean numbers rules to generate the Sino or Native Korean word for that number. Clicking the circular refresh button will give you a new card.",
-                imgPath: KoreanNumbers_One,
+                imgPath: KoreanNumbers_Image_01,
             },
             {
                 text: "Tapping the card will cause the card to animate as it flips over to reveal the decimal numerical integer. One nice thing here is that you can test yourself from both ways! Tapping the refresh button in this state will show you a new integer, allowing you to guess what the Korean word would be, then you can flip to see if you're correct.",
-                imgPath: KoreanNumbers_Two,
+                imgPath: KoreanNumbers_Image_02,
             },
             {
                 text: "I created a Settings tab so you can easily switch between Sino / Native number systems, and to decide if you want the Sino 10, 100, and 1000 words highlighted on the card (which I found extremely helpful). I also thought it would be fun to have custom toggles here with the Octopus character to give this site a little more charm.",
-                imgPath: KoreanNumbers_Three,
+                imgPath: KoreanNumbers_Image_03,
             },
         ],
         technologies: [ technologies.html, technologies.scss, technologies.javascript ]
