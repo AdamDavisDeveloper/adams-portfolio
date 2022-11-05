@@ -1,0 +1,35 @@
+#NotFound {
+    min-height: 100vh;
+    color: white;
+    width: 78%;
+    max-width: 30rem;
+    margin: auto;
+    padding-bottom: var(--page-padding-bottom);
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    #Wizard {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        p {
+            font-weight: 200;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            // Text Color Stuff!
+            background: #54BA9F;
+            background: linear-gradient(to right, #54BA9F 0%, #254AA0 98%);
+            background-clip: initial;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        img {
+            width: 70%;
+            margin: auto;
+        }
+    }
+}

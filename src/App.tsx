@@ -13,6 +13,7 @@ import HomeMain from './Views/Home/Main';
 import AboutMe from './Views/AboutMe/AboutMe';
 import Projects from './Views/Projects/Projects';
 import ProjectPage from './Views/Projects/ViewProject';
+import NotFound from './Views/NotFound/NotFound';
 
 // Libraries
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -33,6 +34,7 @@ export default function App() {
         <TopLogo />
         <Navbar/>
         <Routes>
+            <Route path='*'                       element={<NotFound />} />
             <Route path='/'                       element={<HomeMain />} />
 
             <Route path="projects"                element={<Projects />} />

@@ -5,6 +5,9 @@ import { ProjectData } from "./ProjectsData";
 import TechnologyLogo from "../../components/TechnologyLogo";
 import './ViewProject.scss';
 
+// 404 NotFound
+import NotFound from "../NotFound/NotFound";
+
 /**
  * 
  * @param param A string which comes from this page's queryParam (router-dom hook)
@@ -45,8 +48,8 @@ export default function() {
     const { project_name } = useParams();
     const projectData = getProjectData(project_name);
 
-    //TODO: have this redirect to a 404 page
-    if(!projectData.id) return <></>;
+
+    if(!projectData.id) return <NotFound />;
     return (
         <div id="ProjectPage">
             <header>
