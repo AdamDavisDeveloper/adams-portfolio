@@ -72,10 +72,10 @@ export const ProjectTileData: projectTileTypes[] = [
     // },
     {
         title: "The Outer Space Connector 🚏🌒",
-        description: "",
+        description: `A way to connect with your neighbors in "space".`,
         urlSlug: "outer-space-connector",
         imagePath: "",
-        tags: [ tags.javascript, tags.fullstack ],
+        tags: [ tags.typescript, tags.fullstack, tags.design ],
     },
     {
         title: "See Something New",
@@ -128,24 +128,24 @@ export const ProjectData = [
     },
     {
         id: "outer-space-connector",
-        title: "The Outer Space Connector",
-        subtitle: "",
-        writeUp: "",
+        title: "The Outer Space Connector 🚏🌒",
+        subtitle: "Connect to your neighbors in a hidden digital space.",
+        writeUp: "My brother and I were talking about how cool it would be to leave hidden QR codes around the towns where we live and see if anyone finds them and scans them with their phones. That lead to this idea which is a web app which creates QR codes that my bro and I can place in any location, and the QR codes will act as entry points to a digital message board which is only accessible at that location. This allows for random people to attach a message when they discover these QR codes and read messages from those who preceeded them. It's outer space bus-stop themed. [This project is being built currently]",
         liveURL: "",
         github: "",
         sections: [
             {
-                text: "Test",
+                text: `The "feel" of this website was important in making the user feel that they found something special and hidden. I gave a slight delay and a fade-in effect before you see anything on the website. This has the added benefit of weeding out trolls who wouldn't have a long enough attention span to wait 3 seconds for the UI to materialize. lol`,
                 imgPath: OuterConnector01,
                 vertical: false // image will be set above the text when true
             },
             {
-                text: "Test2",
+                text: "I continued using basic motion design here to give a more intentional feel to the website. Here you can see some transition ideas and the message board. This is still a work in progress and I would like each location to have a specified title given by my brother or I.",
                 imgPath: OuterConnector02,
                 vertical: false // image will be set above the text when true
             },
         ],
-        technologies: [ technologies.typescript, technologies.scss ]
+        technologies: [ technologies.typescript, technologies.scss, technologies.firebase, technologies.figma ]
     },
     {
         id: "see-something-new",
