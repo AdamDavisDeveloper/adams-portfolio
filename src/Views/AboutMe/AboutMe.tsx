@@ -23,7 +23,8 @@ const favoriteTools = [
     technologies.typescript,
     technologies.react,
     technologies.vite,
-    technologies.firebase
+    technologies.firebase,
+    technologies.figma
 ]
 
 export default function AboutMe() {
