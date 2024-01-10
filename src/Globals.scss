@@ -39,6 +39,7 @@ html {
   flex-direction: column;
   img {
     margin-bottom: .5rem;
+    height: 41px; // I rarely do this but it makes sense here
   }
   span {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
