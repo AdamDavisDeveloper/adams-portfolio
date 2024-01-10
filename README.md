@@ -1,10 +1,25 @@
 # Adam Davis's Tech Portfolio
 
-I've made a few of these and ended up hating them all so this one might not be different. 🗿 <br>
-Excited to be using TS, React, and Vite for this one though. <br>
-Live link coming soon.
+<i>I've made a few of these and ended up hating them all so this one might not be different.</i> 🗿 <br>
 
-### To Do
-- Write AboutMe paragraph
-- Add resume to AboutMe
-- Make a contact form and add recaptcha
+## I love this website!
+It's so increibly easy for me to made edits and add new projects due to the way I set up React to generate the website by reading Typescript objects.
+```
+{
+    id: "",
+    title: "",
+    subtitle: "",
+    writeUp: "",
+    liveURL: "",
+    github: "",
+    sections: [
+        {
+            text: "",
+            imgPath: "",
+            vertical: false
+        },
+    ],
+    technologies: []
+}
+```
+Above we have an example of a Project's data and my React components handle arrays of such objects to create the website. 👍
