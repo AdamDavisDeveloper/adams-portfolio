@@ -20,9 +20,20 @@ function getProjectData(param: any) {
 const Section = (props: {
     leftOrientation: boolean,
     text: string,
-    imgPath: string
+    imgPath: string,
+    isVertical: boolean
 }) => {
     // TODO: this sucks and it's not DRY. Gotta replace this.
+    if(props.isVertical) {
+        return (
+            <section className="vertical-oriented">
+                <div className="img-wrapper"><img src={props.imgPath} alt="screenshot of the project" /></div>
+                <div className="text-wrapper">
+                    <p>{props.text}</p>
+                </div>
+            </section>
+        )
+    }
     if(props.leftOrientation) {
         return (
             <section className="left-oriented">
@@ -63,6 +74,7 @@ export default function() {
                         leftOrientation={i % 2 == 0 ? true : false} //left orient every other
                         text={section.text}
                         imgPath={section.imgPath}
+                        isVertical={section.vertical}
                     />)
                 )
             }

@@ -20,28 +20,30 @@ const ProjectTag = (props: {
 }
 
 const ProjectTile = (props: projectTileTypes) => {
+    const { title, description, urlSlug, imagePath, tags } = props;
+
     return (
         <div className="project-tile">
             {
-                props.imagePath &&
+                imagePath &&
                 <div className="project-tile-image">
-                    <img src={props.imagePath} alt="screenshot of this project" />
+                    <img src={imagePath} alt="screenshot of this project" />
                 </div>
             }
 
-            <Link to={props.urlSlug}>
+            <Link to={urlSlug}>
                 <div className="project-tile-info">
                     <div className="info-top-row">
-                        <span>{props.title}</span>
+                        <span>{title}</span>
                         <img src={ArrowCircle} alt="arrow pointing up and right" />
                     </div>
                     <div className="info-bottom-row">
-                        <span>{props.description}</span>
+                        <span>{description}</span>
                         
-                        {props.tags && 
+                        {tags && 
                         <div className="tags">
                             {
-                                props.tags.map((tag, i) => (
+                                tags.map((tag, i) => (
                                     <ProjectTag key={i} name={tag.name} color={tag.color} />
                                 ))
                             }
@@ -57,7 +59,7 @@ export default function() {
     return (
         <div id="Projects">
             <header>
-                <h1>New Projects</h1>
+                <h1>Projects</h1>
             </header>
 
             {

@@ -42,6 +42,9 @@
         }
     }
 
+    // This allows for landscape screenshots
+    .vertical-oriented { flex-direction: column }
+
     #ButtonsRow {
         display: flex;
         justify-content: space-around;
