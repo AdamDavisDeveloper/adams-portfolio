@@ -3,11 +3,13 @@
 import ReactLogo from '/src/img/logos/react.png';           //@ts-ignore
 import ViteLogo from '/src/img/logos/vite.png';             //@ts-ignore
 import HtmlLogo from '/src/img/logos/html.png';             //@ts-ignore
+import CSSLogo from '/src/img/logos/css.png';               //@ts-ignore
 import ScssLogo from '/src/img/logos/scss.png';             //@ts-ignore
 import PythonLogo from '/src/img/logos/python.png';         //@ts-ignore
 import FirebaseLogo from '/src/img/logos/firebase.png';     //@ts-ignore
 import JavascriptLogo from '/src/img/logos/javascript.png'; //@ts-ignore
 import TypescriptLogo from '/src/img/logos/typescript.png'; //@ts-ignore
+import FigmaLogo from '/src/img/logos/figma.png';           //@ts-ignore
 
 // Korean Numbers Project
 import KoreanNumbers_Image_01 from '/src/img/project/korean-numbers-01.png';    //@ts-ignore
@@ -15,10 +17,13 @@ import KoreanNumbers_Image_02 from '/src/img/project/korean-numbers-02.png';    
 import KoreanNumbers_Image_03 from '/src/img/project/korean-numbers-03.png';    //@ts-ignore
 // See Something New Project
 import SomethingNew_Image_01 from '/src/img/project/something-new-01.png'; //@ts-ignore
-//Links+ Project
+// Links+ Project
 import LinksPlus from '/src/img/project/links-plus.png'; //@ts-ignore
-//OQUARO project
-import OQUAROInteriors from '/src/img/project/oqaro.png'
+// OQUARO project
+import OQUAROInteriors from '/src/img/project/oqaro.png' //@ts-ignore
+// The Outer Space Connector project
+import OuterConnector01 from '/src/img/project/outer-connector-01.gif' //@ts-ignore
+import OuterConnector02 from '/src/img/project/outer-connector-02.gif'
 // -------- End image imports -------- //
 
 interface projectTag {
@@ -35,23 +40,26 @@ export interface projectTileTypes {
 }
 
 const tags = {
-    javascript: {name: "JavaScript",    color: "rgba(223, 217, 61, 0.58)"},
-    typescript: {name: "TypeScript",    color: "#234D5A"},
-    generative: {name: "Generative",    color: "#235A29"},
-    algorithm:  {name: "Algorithm",     color: "#5A2330"},
-    learning:   {name: "Learning",      color: "#315E4B"},
-    design:     {name: "Design",        color: "#00c3da"}
+    javascript:     {name: "JavaScript",        color: "rgba(223, 217, 61, 0.58)"},
+    typescript:     {name: "TypeScript",        color: "#234D5A"},
+    generative:     {name: "Generative",        color: "#235A29"},
+    algorithm:      {name: "Algorithm",         color: "#5A2330"},
+    learning:       {name: "Learning",          color: "#315E4B"},
+    design:         {name: "Design",            color: "#00c3da"},
+    fullstack:      {name: "Fullstack",         color: "#5fc69b"}
 }
 
 export const technologies = {
     react:          {name: "React",         image: ReactLogo},
     vite:           {name: "Vite",          image: ViteLogo},
     html:           {name: "HTML",          image: HtmlLogo},
+    css:            {name: "CSS",           image: CSSLogo},
     scss:           {name: "SCSS",          image: ScssLogo},
     python:         {name: "Python",        image: PythonLogo},
     javascript:     {name: "JavaScript",    image: JavascriptLogo},
     typescript:     {name: "TypeScript",    image: TypescriptLogo},
     firebase:       {name: "Firebase",      image: FirebaseLogo},
+    figma:          {name: "Figma",         image: FigmaLogo},
 }
 
 export const ProjectTileData: projectTileTypes[] = [
@@ -62,6 +70,13 @@ export const ProjectTileData: projectTileTypes[] = [
     //     imagePath: "",
     //     tags: [ tags.typescript, tags.generative, tags.algorithm ],
     // },
+    {
+        title: "The Outer Space Connector 🚏🌒",
+        description: "",
+        urlSlug: "outer-space-connector",
+        imagePath: "",
+        tags: [ tags.javascript, tags.fullstack ],
+    },
     {
         title: "See Something New",
         description: "You're guaranteed to be shown what no one has ever seen before or will see again.",
@@ -110,6 +125,27 @@ export const ProjectData = [
             },
         ],
         technologies: []
+    },
+    {
+        id: "outer-space-connector",
+        title: "The Outer Space Connector",
+        subtitle: "",
+        writeUp: "",
+        liveURL: "",
+        github: "",
+        sections: [
+            {
+                text: "Test",
+                imgPath: OuterConnector01,
+                vertical: false // image will be set above the text when true
+            },
+            {
+                text: "Test2",
+                imgPath: OuterConnector02,
+                vertical: false // image will be set above the text when true
+            },
+        ],
+        technologies: [ technologies.typescript, technologies.scss ]
     },
     {
         id: "see-something-new",
