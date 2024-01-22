@@ -37,7 +37,7 @@ export default function AboutMe() {
 
             <div id="TextBody">
                 <p>
-                    🙌🏼 I'm Adam Davis. Thank you for visiting my little slice of the web and I hope you enjoy your time here. 🥳 <br />
+                    I'm Adam Davis. Thank you for visiting my little slice of the web and I hope you enjoy your time here. <br />
                     I am a software engineer and designer primarily working on web projects but I love playing around with all types of tech and making pretty much anything (I'm working on 3D modeling!). <br />
                     Taking photos, learning new things about the world, and creating are my favorite things and I hope to continue doing them for a long time. <br />
                     Detailed information about my professional experience is on my resume and LinkedIn 👇🏻
