@@ -21,7 +21,7 @@ export default function FeaturedCard(props: {
                 <div className="featured-card">
                     <div className="top-row">
                         <h1>{title}</h1>
-                        <img src={ExternalLinkSVG} alt="outlink symbol" />
+                        <img src={ExternalLinkSVG} width="11" height="11" alt="outlink symbol" />
                     </div>
 
                     <div className="bottom-row">

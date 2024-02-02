@@ -1,3 +1,5 @@
+@import './fonts.scss';
+
 :root {
     --black: #09090C;
     --white: #F8F8F8;
@@ -23,6 +25,8 @@ html {
 #TopLogo {
   padding: .5rem 1rem;
   padding-top: .75rem; 
+  width: auto;
+  height: auto;
 }
 
 

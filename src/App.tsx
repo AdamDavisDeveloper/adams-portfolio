@@ -21,7 +21,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const TopLogo = () => {
   return (
     <div id="TopLogo">
-      <img src={TopLogoImg} alt="logo" />
+      <img src={TopLogoImg} width="48" height="22" alt="logo" />
     </div>
   )
 }

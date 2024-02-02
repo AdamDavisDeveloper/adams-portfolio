@@ -13,7 +13,7 @@ import FactCheckIcon from '@mui/icons-material/FactCheck';
 
 // Images (these ts-ignores are the death of me)
 //@ts-ignore
-import AboutMeImg from '/src/img/about-me.png'; //@ts-ignore
+import AboutMeImg from '/src/img/about-me.webp'; //@ts-ignore
 import Resume from '/src/img/resume.pdf';
 
 //Styles
@@ -32,7 +32,7 @@ export default function AboutMe() {
         <div id="AboutMe">
             <header>
                 <h1>About Me</h1>
-                <img src={AboutMeImg} alt="A man standing in front of a starry sky backdrop" />
+                <img src={AboutMeImg} width="594" height="724" alt="A man standing in front of a starry sky backdrop" />
             </header>
 
             <div id="TextBody">

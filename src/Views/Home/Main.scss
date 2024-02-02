@@ -16,7 +16,10 @@
     
         color: var(--highlight-text);
     
-        img { width: 100%; }
+        img { 
+            width: 100%;
+            height: auto;
+         }
     
         .header-text {
             width: 100%;

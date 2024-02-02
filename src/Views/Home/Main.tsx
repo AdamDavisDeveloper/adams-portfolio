@@ -1,6 +1,6 @@
 import React from "react"
 //@ts-ignore -- TS doesn't recognize this as a "module" (jerk)
-import HomeImage from '/src/img/header-home-lg.png';
+import HomeImage from '/src/img/header-home-lg.webp';
 import './Main.scss';
 
 //Featured Projects Array
@@ -18,7 +18,7 @@ export default function HomeMain() {
                     <span className="name">Adam Davis</span>
                     <span>developer · designer</span>
                 </div>
-                <img src={HomeImage} alt="upside-down man surrounded by pretty light flares" />
+                <img src={HomeImage} width="512" height="792" alt="upside-down man surrounded by pretty light flares" />
             </header>
 
             <div id="TitleDescription">
