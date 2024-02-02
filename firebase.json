@@ -12,16 +12,34 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=31536000"
-          },
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [
           {
-            "source": "**/*.ttf",
-            "headers": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-font-ttf"
-              }
-            ]
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/fonts/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.ttf",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-font-ttf"
           }
         ]
       }

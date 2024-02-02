@@ -1,21 +1,21 @@
 // url('./assets/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Thin.ttf') format('truetype');
 @font-face {
     font-family: 'Fira Sans Extra Condensed';
-    src: url('@/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Regular.ttf') format('truetype');
+    src: url('/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Fira Sans Extra Condensed';
-    src: url('@/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Light.ttf') format('truetype');
+    src: url('/fonts/Fira_Sans_Extra_Condensed/FiraSansExtraCondensed-Light.ttf') format('truetype');
     font-weight: 200;
     font-display: swap;
 }
   
 @font-face {
     font-family: 'Gruppo';
-    src: url('@/fonts/Gruppo/Gruppo-Regular.ttf') format('truetype');
+    src: url('/fonts/Gruppo/Gruppo-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
 }
