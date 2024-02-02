@@ -219,6 +219,6 @@ export const ProjectData = [
                 vertical: true
             },
         ],
-        technologies: [ technologies.html ]
+        technologies: [ technologies.html, technologies.css ]
     },
 ]
