@@ -215,7 +215,7 @@ export const ProjectData = [
                 vertical: false
             },
             {
-                text: `Here is the Profile view as seen by a logged in Pal. Here, Pals can navigate using the conventiently placed bottom navigation bar with three straightforward options: Profile, Send Messages, and Mailbox. The profile view gives status and information around the currently logged in Pal. The Send Messages view allows Pals to record a >20sec voice recording and send it out to random Pals' mailboxes. And the Mailbox is where a Pal can check to see if any messages have been delivered to their box, listen to the messages, and choose to follow any Pal who sends interesting messages.`,
+                text: `Here is the Profile view as seen by a logged in Pal. Here, Pals can navigate using the conventiently placed bottom navigation bar with three straightforward options: Profile, Send Messages, and Mailbox. The profile view gives status and information around the currently logged in Pal. The Send Messages view allows Pals to record a <20sec voice recording and send it out to random Pals' mailboxes. And the Mailbox is where a Pal can check to see if any messages have been delivered to their box, listen to the messages, and choose to follow any Pal who sends interesting messages.`,
                 imgPath: Palvox04,
                 vertical: false
             },
