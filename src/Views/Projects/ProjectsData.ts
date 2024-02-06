@@ -19,6 +19,11 @@ import KoreanNumbers_Image_03 from '/src/img/project/korean-numbers-03.png';    
 import SomethingNew_Image_01 from '/src/img/project/something-new-01.png'; //@ts-ignore
 // Links+ Project
 import LinksPlus from '/src/img/project/links-plus.png'; //@ts-ignore
+// Palvox
+import Palvox01 from '/src/img/project/palvox/01.png' //@ts-ignore
+import Palvox02 from '/src/img/project/palvox/02.gif' //@ts-ignore
+import Palvox03 from '/src/img/project/palvox/03.png' //@ts-ignore
+import Palvox04 from '/src/img/project/palvox/04.png' //@ts-ignore
 // OQUARO project
 import OQUAROInteriors from '/src/img/project/oqaro.png' //@ts-ignore
 // The Outer Space Connector project
@@ -90,6 +95,13 @@ export const ProjectTileData: projectTileTypes[] = [
         urlSlug: "links-plus",
         imagePath: "",
         tags: [ tags.design ],
+    },
+    {
+        title: "Palvox",
+        description: "Send and receive anonymous audio messages with strangers.",
+        urlSlug: "palvox",
+        imagePath: "",
+        tags: [ tags.design, tags.fullstack, tags.javascript ],
     },
     {
         title: "Korean Flashcards",
@@ -178,6 +190,37 @@ export const ProjectData = [
             },
         ],
         technologies: [ technologies.html, technologies.scss ]
+    },
+    {
+        id: "palvox",
+        title: "Palvox",
+        subtitle: "Send and receive anonymous audio messages with strangers.",
+        liveURL: "https://palvox-dev.web.app/",
+        writeUp: `Palvox is a project I started in 2022 as a way to both give people a way to connect without the burden of traditional social media and as a platform which is audio-first and completely accessible to those with visual disabilities. Palvox is an app which allows users (or "Pals") to create short audio recordings on their phones and send them out where the messages will be delivered to a random set of other users. When a message is delivered to your mailbox from another Pal, you will have the option to follow them to continue receiving their future messages. All Pals are anonymous first, meaning that the Pal display names shown in the mailbox are randomly generated and not chosen by users. I wanted this app to be a fun way to connect with strangers in a pro-parasocial format, allowing users to listen to others, not being able to directly communicate back to them but able to toss their own thoughts out to other strangers. Unfortunately, as these projects often go, I got very busy with work and shelved the project only to return and find that I have gotten so much better at systems design that this code base needs a total overhaul. Additionally, capturing audio has less browser support than I originally thought and I would rewrite this project using React Native should I pick it up again.`,
+        github: "",
+        sections: [
+            {
+                text: `These are screenshots of the initial developed designs for Palvox. This is the view shown to anyone who arrives on the Palvox web app and hasn't logged in or created an account yet.`,
+                imgPath: Palvox01,
+                vertical: false
+            },
+            {
+                text: `I used the Framer Motion library to prototype some basic motion design here and I used the slide in modal to reduce what I call "view switching fatigue."`,
+                imgPath: Palvox02,
+                vertical: false
+            },
+            {
+                text: `This is the account creation screen which you would see after chosing an email and password (I used Firebase Authentication). Initially, I was using an API called DiceBear for randomized SVG character profile pictures. I would allow the Pal (user) to select one from the list or generate a new list of random profile photo options. This API no longer exists so I just have colored circles for now.`,
+                imgPath: Palvox03,
+                vertical: false
+            },
+            {
+                text: `Here is the Profile view as seen by a logged in Pal. Here, Pals can navigate using the conventiently placed bottom navigation bar with three straightforward options: Profile, Send Messages, and Mailbox. The profile view gives status and information around the currently logged in Pal. The Send Messages view allows Pals to record a >20sec voice recording and send it out to random Pals' mailboxes. And the Mailbox is where a Pal can check to see if any messages have been delivered to their box, listen to the messages, and choose to follow any Pal who sends interesting messages.`,
+                imgPath: Palvox04,
+                vertical: false
+            },
+        ],
+        technologies: [ technologies.react, technologies.javascript, technologies.firebase, technologies.figma ]
     },
     {
         id: "korean-flashcards",
