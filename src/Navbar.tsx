@@ -8,6 +8,7 @@ import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material';
 import CottageIcon from '@mui/icons-material/Cottage';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+import BookIcon from '@mui/icons-material/Book';
 
 import { Link } from "react-router-dom";
 
@@ -63,9 +64,19 @@ export default function() {
             value="projects"
             icon={<DeveloperModeIcon />}
           />
-          <BottomNavigationAction 
+
+          {/* <BottomNavigationAction 
             sx={navActionStyles}
             key={2} 
+            label="Blog"  
+            component={Link}
+            to='/blog'
+            value="blog"
+            icon={<BookIcon />}
+          /> */}
+          <BottomNavigationAction 
+            sx={navActionStyles}
+            key={3} 
             label="About Me"  
             component={Link}
             to='/about'
