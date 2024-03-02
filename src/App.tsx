@@ -14,6 +14,8 @@ import AboutMe from './Views/AboutMe/AboutMe';
 import Projects from './Views/Projects/Projects';
 import ProjectPage from './Views/Projects/ViewProject';
 import NotFound from './Views/NotFound/NotFound';
+import BlogList from './Views/Blog/BlogList';
+import Article from './Views/Blog/Article';
 
 // Libraries
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -41,6 +43,9 @@ export default function App() {
             <Route path="projects/:project_name"  element={<ProjectPage />} />
 
             <Route path="about"                   element={<AboutMe />} />
+
+            <Route path="blog"                    element={<BlogList />} />
+            <Route path="blog/:article_name"      element={<Article />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
