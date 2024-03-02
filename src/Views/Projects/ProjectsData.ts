@@ -157,7 +157,7 @@ export const ProjectData = [
                 vertical: false // image will be set above the text when true
             },
         ],
-        technologies: [ technologies.typescript, technologies.scss, technologies.firebase, technologies.figma ]
+        technologies: [ technologies.react, technologies.typescript, technologies.scss, technologies.firebase, technologies.figma ]
     },
     {
         id: "see-something-new",
