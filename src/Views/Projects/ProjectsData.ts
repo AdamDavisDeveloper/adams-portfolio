@@ -282,7 +282,7 @@ export const ProjectData = [
                 vertical: false
             },
             {
-                text: `The "Library" button on the top right opens of a list of playable songs hosted directly on the website itself. On desktop and mobile the selected song is highlighted amnd when the songs are scrolled over (on desktop) the increase in side subtely to give a more interactive experience.`,
+                text: `The "Library" button on the top right opens of a list of playable songs hosted directly on the website itself. On desktop and mobile the selected song is highlighted and when the song tiles are scrolled over (on desktop) they subtely increase in size to give a more interactive experience.`,
                 imgPath: CozyChillhop02,
                 vertical: false
             },
