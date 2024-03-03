@@ -28,7 +28,10 @@ import Palvox04 from '/src/img/project/palvox/04.png' //@ts-ignore
 import OQUAROInteriors from '/src/img/project/oqaro.png' //@ts-ignore
 // The Outer Space Connector project
 import OuterConnector01 from '/src/img/project/outer-connector-01.gif' //@ts-ignore
-import OuterConnector02 from '/src/img/project/outer-connector-02.gif'
+import OuterConnector02 from '/src/img/project/outer-connector-02.gif' //@ts-ignore
+// Cozy Chillhop
+import CozyChillhop01 from '/src/img/project/cozy-chillhop/cozy-chillhop-01.png' //@ts-ignore
+import CozyChillhop02 from '/src/img/project/cozy-chillhop/cozy-chillhop-02.png' //@ts-ignore
 // -------- End image imports -------- //
 
 interface projectTag {
@@ -42,6 +45,16 @@ export interface projectTileTypes {
     urlSlug         :string,
     imagePath       :string,
     tags            :projectTag[]
+}
+
+// Helper Functions
+
+// Determines a project's subtitle by matching the project's ID 
+// to the url-slug of it's matching project tile description 
+// and returns the string or undefined if not found.
+function getProjectDescriptionFromTile(projectID: string): string | undefined {
+    const projectTile = ProjectTileData.find((tile) => tile.urlSlug === projectID);
+    return projectTile?.description;
 }
 
 const tags = {
@@ -111,6 +124,13 @@ export const ProjectTileData: projectTileTypes[] = [
         tags: [ tags.generative, tags.algorithm, tags.learning ],
     },
     {
+        title: "Cozy Music Player",
+        description: "A React music player for listening to a currated list of chillhop beats for studying/coding.",
+        urlSlug: "cozy-chillhop",
+        imagePath: "",
+        tags: [ tags.javascript, tags.design ],
+    },
+    {
         title: "OQARO Interiors",
         description: "A simple yet elegant design for a high end designer brand.",
         urlSlug: "oqaro-interiors",
@@ -141,7 +161,7 @@ export const ProjectData = [
     {
         id: "outer-space-connector",
         title: "The Outer Space Connector 🚏🌒",
-        subtitle: "Connect to your neighbors in a hidden digital space.",
+        subtitle: getProjectDescriptionFromTile("outer-space-connector"),
         writeUp: "My brother and I were talking about how cool it would be to leave hidden QR codes around the towns where we live and see if anyone finds them and scans them with their phones. That lead to this idea which is a web app which creates QR codes that my bro and I can place in any location, and the QR codes will act as entry points to a digital message board which is only accessible at that location. This allows for random people to attach a message when they discover these QR codes and read messages from those who preceeded them. It's outer space bus-stop themed. [This project is being built currently]",
         liveURL: "",
         github: "",
@@ -149,12 +169,12 @@ export const ProjectData = [
             {
                 text: `The "feel" of this website was important in making the user feel that they found something special and hidden. I gave a slight delay and a fade-in effect before you see anything on the website. This has the added benefit of weeding out trolls who wouldn't have a long enough attention span to wait 3 seconds for the UI to materialize. lol`,
                 imgPath: OuterConnector01,
-                vertical: false // image will be set above the text when true
+                vertical: false
             },
             {
                 text: "I continued using basic motion design here to give a more intentional feel to the website. Here you can see some transition ideas and the message board. This is still a work in progress and I would like each location to have a specified title given by my brother or I.",
                 imgPath: OuterConnector02,
-                vertical: false // image will be set above the text when true
+                vertical: false
             },
         ],
         technologies: [ technologies.react, technologies.typescript, technologies.scss, technologies.firebase, technologies.figma ]
@@ -162,7 +182,7 @@ export const ProjectData = [
     {
         id: "see-something-new",
         title: "See Something New",
-        subtitle: "Guaranteed to be shown what no one has ever seen or will see again.",
+        subtitle: getProjectDescriptionFromTile("see-something-new"),
         writeUp: "When you refresh the image, you have a possibility, regardless of how slim, of seeing a picture of anything in existence. You are looking at something which has statistically never been viewed by any human in all of history or will ever see throughout the life of the universe. There is a 1 in (1.5252803... x 10^1155955) chance of any one image being shown to you. I wrote a compact script to create the 400 rows and fill each row with 400 colored divs. The idea came to me while considering the perfectly square tiles covering the walls in the room where I was sitting.",
         liveURL: "https://see-something-new.netlify.app/",
         github: "https://github.com/AdamDavisDeveloper/see-something-new",
@@ -178,7 +198,7 @@ export const ProjectData = [
     {
         id: "links-plus",
         title: "Links+",
-        subtitle: "A place for me to display links to my various socials.",
+        subtitle: getProjectDescriptionFromTile("links-plus"),
         writeUp: "I made this as a way for me to have a digital business card which outlinks to my important social accounts and websites. I chose to use vanilla web technologies to increase response time and decrease dev time. I used 10mm NFC chips which, when placed in my wrist-watches, allows people to tap their phones on my watch and get a push notification which opens their default browser to this website. For Sass compiling, I used Glenn Marks' Live Sass Compliler for VS Code. ",
         liveURL: "https://profile.adamdavisdeveloper.com",
         github: "https://github.com/AdamDavisDeveloper/nfc-links",
@@ -194,7 +214,7 @@ export const ProjectData = [
     {
         id: "palvox",
         title: "Palvox",
-        subtitle: "Send and receive anonymous audio messages with strangers.",
+        subtitle: getProjectDescriptionFromTile("palvox"),
         liveURL: "https://palvox-dev.web.app/",
         writeUp: `Palvox is a project I started in 2022 as a way to both give people a way to connect without the burden of traditional social media and as a platform which is audio-first and completely accessible to those with visual disabilities. Palvox is an app which allows users (or "Pals") to create short audio recordings on their phones and send them out where the messages will be delivered to a random set of other users. When a message is delivered to your mailbox from another Pal, you will have the option to follow them to continue receiving their future messages. All Pals are anonymous first, meaning that the Pal display names shown in the mailbox are randomly generated and not chosen by users. I wanted this app to be a fun way to connect with strangers in a pro-parasocial format, allowing users to listen to others, not being able to directly communicate back to them but able to toss their own thoughts out to other strangers. Unfortunately, as these projects often go, I got very busy with work and shelved the project only to return and find that I have gotten so much better at systems design that this code base needs a total overhaul. Additionally, capturing audio has less browser support than I originally thought and I would rewrite this project using React Native should I pick it up again.`,
         github: "",
@@ -225,7 +245,7 @@ export const ProjectData = [
     {
         id: "korean-flashcards",
         title: "Korean Flashcards",
-        subtitle: "Generated flash cards to help you study Sino and Native Korean numbers",
+        subtitle: getProjectDescriptionFromTile("korean-flashcards"),
         writeUp: "While I was on my journey to Korean fluency, I reached the point where I must learn the TWO (what in the world Korea) number systems which they use. Making 10 flashcards was no problem, but the mental algorithm you have to do to convert digits into Korean could only be effectively practiced if I hand wrote several hundred cards. Since I'm not psychotic, I decided to make this site to help myself and anyone else who is learning Korean numbers. The technology I chose was intentionally vanilla. I wanted this to be fast, simple, and lightweight as to be maintainable and quick to production. Plus, vanilla HTML/JS is just cool, yo.",
         liveURL: "https://learn-korean-numbers.netlify.app/",
         github: "https://github.com/AdamDavisDeveloper/learn-korean-numbers",
@@ -249,9 +269,30 @@ export const ProjectData = [
         technologies: [ technologies.html, technologies.scss, technologies.javascript ]
     },
     {
+        id: "cozy-chillhop",
+        title: "Cozy Music Player",
+        subtitle: getProjectDescriptionFromTile("cozy-chillhop"),
+        writeUp: "I made this three years ago when I was first learning React. I was really into listening to chillhop music while programming and I wanted to use my new skills to make a cool looking music player.",
+        liveURL: "https://cozycoding.netlify.app/",
+        github: "https://github.com/AdamDavisDeveloper/react-player",
+        sections: [
+            {
+                text: "The design was kept very simple for this project. I made a custom media player with SCSS and HTML which uses a gradient background matching the album image's colors. The album cover slowly spins like a record when the music is playing and stops when paused.",
+                imgPath: CozyChillhop01,
+                vertical: false
+            },
+            {
+                text: `The "Library" button on the top right opens of a list of playable songs hosted directly on the website itself. On desktop and mobile the selected song is highlighted amnd when the songs are scrolled over (on desktop) the increase in side subtely to give a more interactive experience.`,
+                imgPath: CozyChillhop02,
+                vertical: false
+            },
+        ],
+        technologies: [ technologies.react, technologies.html, technologies.scss, technologies.javascript ]
+    },
+    {
         id: "oqaro-interiors",
         title: "OQARO Interiors",
-        subtitle: "A simple yet elegant design for a high end designer brand.",
+        subtitle: getProjectDescriptionFromTile("oqaro-interiors"),
         writeUp: "I created this in an effort to code a sleek landing page quickly for practice. I made it three years ago and it's amazing to see the progress I have made. I'm including it on this website for old times sake, and for me to be grateful to my past self for puting in the hard work back then. 💪",
         liveURL: "",
         github: "",
