@@ -1,3 +1,5 @@
+//@ts-ignore
+import yearsSinceDate from '/src/utils/yearsSinceDate.ts'
 // -------- Image imports for Vite build -------- //
 //@ts-ignore
 import ReactLogo from '/src/img/logos/react.png';           //@ts-ignore
@@ -272,7 +274,7 @@ export const ProjectData = [
         id: "cozy-chillhop",
         title: "Cozy Music Player",
         subtitle: getProjectDescriptionFromTile("cozy-chillhop"),
-        writeUp: "I made this three years ago when I was first learning React. I was really into listening to chillhop music while programming and I wanted to use my new skills to make a cool looking music player.",
+        writeUp: `I made this ${yearsSinceDate("11-2020")} years ago when I was first learning React. I was really into listening to chillhop music while programming and I wanted to use my new skills to make a cool looking music player.`,
         liveURL: "https://cozycoding.netlify.app/",
         github: "https://github.com/AdamDavisDeveloper/react-player",
         sections: [
