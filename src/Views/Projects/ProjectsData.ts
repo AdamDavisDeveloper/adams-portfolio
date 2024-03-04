@@ -12,6 +12,7 @@ import FirebaseLogo from '/src/img/logos/firebase.png';     //@ts-ignore
 import JavascriptLogo from '/src/img/logos/javascript.png'; //@ts-ignore
 import TypescriptLogo from '/src/img/logos/typescript.png'; //@ts-ignore
 import FigmaLogo from '/src/img/logos/figma.png';           //@ts-ignore
+import FramerLogo from '/src/img/logos/framer.png';             //@ts-ignore
 
 // Korean Numbers Project
 import KoreanNumbers_Image_01 from '/src/img/project/korean-numbers-01.png';    //@ts-ignore
@@ -34,6 +35,9 @@ import OuterConnector02 from '/src/img/project/outer-connector-02.gif' //@ts-ign
 // Cozy Chillhop
 import CozyChillhop01 from '/src/img/project/cozy-chillhop/cozy-chillhop-01.png' //@ts-ignore
 import CozyChillhop02 from '/src/img/project/cozy-chillhop/cozy-chillhop-02.png' //@ts-ignore
+// Portfolio Template
+import PortfolioTemplate01 from '/src/img/project/portfolio-template/portfolio-template-01.gif' //@ts-ignore
+import PortfolioTemplate02 from '/src/img/project/portfolio-template/portfolio-template-02.gif' //@ts-ignore
 // -------- End image imports -------- //
 
 interface projectTag {
@@ -58,6 +62,11 @@ function getProjectDescriptionFromTile(projectID: string): string | undefined {
     const projectTile = ProjectTileData.find((tile) => tile.urlSlug === projectID);
     return projectTile?.description;
 }
+//
+function getProjectTitleFromTile(projectID: string): string | undefined {
+    const projectTile = ProjectTileData.find((tile) => tile.urlSlug === projectID);
+    return projectTile?.title;
+}
 
 const tags = {
     javascript:     {name: "JavaScript",        color: "rgba(223, 217, 61, 0.58)"},
@@ -80,6 +89,7 @@ export const technologies = {
     typescript:     {name: "TypeScript",    image: TypescriptLogo},
     firebase:       {name: "Firebase",      image: FirebaseLogo},
     figma:          {name: "Figma",         image: FigmaLogo},
+    framer:         {name: "Framer",        image: FramerLogo},
 }
 
 export const ProjectTileData: projectTileTypes[] = [
@@ -103,6 +113,13 @@ export const ProjectTileData: projectTileTypes[] = [
         urlSlug: "see-something-new",
         imagePath: "",
         tags: [ tags.javascript, tags.generative, tags.algorithm ],
+    },
+    {
+        title: "React Portfolio Template",
+        description: "A React web portfolio template I made with some nice scoll and transition animations. Feel free to use it!",
+        urlSlug: "portfolio-template",
+        imagePath: "",
+        tags: [ tags.javascript, tags.design ],
     },
     {
         title: "Links+",
@@ -162,7 +179,7 @@ export const ProjectData = [
     },
     {
         id: "outer-space-connector",
-        title: "The Outer Space Connector 🚏🌒",
+        title: getProjectTitleFromTile("outer-space-connector"),
         subtitle: getProjectDescriptionFromTile("outer-space-connector"),
         writeUp: "My brother and I were talking about how cool it would be to leave hidden QR codes around the towns where we live and see if anyone finds them and scans them with their phones. That lead to this idea which is a web app which creates QR codes that my bro and I can place in any location, and the QR codes will act as entry points to a digital message board which is only accessible at that location. This allows for random people to attach a message when they discover these QR codes and read messages from those who preceeded them. It's outer space bus-stop themed. [This project is being built currently]",
         liveURL: "",
@@ -183,7 +200,7 @@ export const ProjectData = [
     },
     {
         id: "see-something-new",
-        title: "See Something New",
+        title: getProjectTitleFromTile("see-something-new"),
         subtitle: getProjectDescriptionFromTile("see-something-new"),
         writeUp: "When you refresh the image, you have a possibility, regardless of how slim, of seeing a picture of anything in existence. You are looking at something which has statistically never been viewed by any human in all of history or will ever see throughout the life of the universe. There is a 1 in (1.5252803... x 10^1155955) chance of any one image being shown to you. I wrote a compact script to create the 400 rows and fill each row with 400 colored divs. The idea came to me while considering the perfectly square tiles covering the walls in the room where I was sitting.",
         liveURL: "https://see-something-new.netlify.app/",
@@ -198,8 +215,29 @@ export const ProjectData = [
         technologies: [ technologies.html, technologies.scss, technologies.javascript ]
     },
     {
+        id: "portfolio-template",
+        title: getProjectTitleFromTile("portfolio-template"),
+        subtitle: getProjectDescriptionFromTile("portfolio-template"),
+        writeUp: `This is a simple React built portfolio website template which uses the Framer Motion library for neat animations. I was going to use this as my own website back in the day, but I actually shelved it for something else. Please feel free to use the template if you want and add to it to make it even better. :-)`,
+        liveURL: "https://adams-portfolio-template.netlify.app/",
+        github: "https://github.com/AdamDavisDeveloper/react-portfolio",
+        sections: [
+            {
+                text: `I used the Framer Motion React animation library to help me achieve these smooth page transitions and line animations (there are even more on the desktop version). I love website animations but they can be a fickle friend if you lose sight of the purpose.`,
+                imgPath: PortfolioTemplate01,
+                vertical: false
+            },
+            {
+                text: "Although the design of this site is on the crude side in my opinion, it was a nice playground for me to test the motion design that I was learning. I've been using the knowledge I learned here in all sorts of projects going forward.",
+                imgPath: PortfolioTemplate02,
+                vertical: false
+            },
+        ],
+        technologies: [ technologies.react, technologies.html, technologies.scss, technologies.javascript, technologies.framer, technologies.figma ]
+    },
+    {
         id: "links-plus",
-        title: "Links+",
+        title: getProjectTitleFromTile("links-plus"),
         subtitle: getProjectDescriptionFromTile("links-plus"),
         writeUp: "I made this as a way for me to have a digital business card which outlinks to my important social accounts and websites. I chose to use vanilla web technologies to increase response time and decrease dev time. I used 10mm NFC chips which, when placed in my wrist-watches, allows people to tap their phones on my watch and get a push notification which opens their default browser to this website. For Sass compiling, I used Glenn Marks' Live Sass Compliler for VS Code. ",
         liveURL: "https://profile.adamdavisdeveloper.com",
@@ -215,7 +253,7 @@ export const ProjectData = [
     },
     {
         id: "palvox",
-        title: "Palvox",
+        title: getProjectTitleFromTile("palvox"),
         subtitle: getProjectDescriptionFromTile("palvox"),
         liveURL: "https://palvox-dev.web.app/",
         writeUp: `Palvox is a project I started in 2022 as a way to both give people a way to connect without the burden of traditional social media and as a platform which is audio-first and completely accessible to those with visual disabilities. Palvox is an app which allows users (or "Pals") to create short audio recordings on their phones and send them out where the messages will be delivered to a random set of other users. When a message is delivered to your mailbox from another Pal, you will have the option to follow them to continue receiving their future messages. All Pals are anonymous first, meaning that the Pal display names shown in the mailbox are randomly generated and not chosen by users. I wanted this app to be a fun way to connect with strangers in a pro-parasocial format, allowing users to listen to others, not being able to directly communicate back to them but able to toss their own thoughts out to other strangers. Unfortunately, as these projects often go, I got very busy with work and shelved the project only to return and find that I have gotten so much better at systems design that this code base needs a total overhaul. Additionally, capturing audio has less browser support than I originally thought and I would rewrite this project using React Native should I pick it up again.`,
@@ -242,11 +280,11 @@ export const ProjectData = [
                 vertical: false
             },
         ],
-        technologies: [ technologies.react, technologies.javascript, technologies.firebase, technologies.figma ]
+        technologies: [ technologies.react, technologies.javascript, technologies.firebase, technologies.framer, technologies.figma ]
     },
     {
         id: "korean-flashcards",
-        title: "Korean Flashcards",
+        title: getProjectTitleFromTile("korean-flashcards"),
         subtitle: getProjectDescriptionFromTile("korean-flashcards"),
         writeUp: "While I was on my journey to Korean fluency, I reached the point where I must learn the TWO (what in the world Korea) number systems which they use. Making 10 flashcards was no problem, but the mental algorithm you have to do to convert digits into Korean could only be effectively practiced if I hand wrote several hundred cards. Since I'm not psychotic, I decided to make this site to help myself and anyone else who is learning Korean numbers. The technology I chose was intentionally vanilla. I wanted this to be fast, simple, and lightweight as to be maintainable and quick to production. Plus, vanilla HTML/JS is just cool, yo.",
         liveURL: "https://learn-korean-numbers.netlify.app/",
@@ -272,7 +310,7 @@ export const ProjectData = [
     },
     {
         id: "cozy-chillhop",
-        title: "Cozy Music Player",
+        title: getProjectTitleFromTile("cozy-chillhop"),
         subtitle: getProjectDescriptionFromTile("cozy-chillhop"),
         writeUp: `I made this ${yearsSinceDate("11-2020")} years ago when I was first learning React. I was really into listening to chillhop music while programming and I wanted to use my new skills to make a cool looking music player.`,
         liveURL: "https://cozycoding.netlify.app/",
@@ -293,7 +331,7 @@ export const ProjectData = [
     },
     {
         id: "oqaro-interiors",
-        title: "OQARO Interiors",
+        title: getProjectTitleFromTile("oqaro-interiors"),
         subtitle: getProjectDescriptionFromTile("oqaro-interiors"),
         writeUp: `I created this in an effort to code a sleek landing page quickly for practice. I made it ${yearsSinceDate("05-2021")} years ago and it's amazing to see the progress I have made. I'm including it on this website for old times sake, and for me to be grateful to my past self for puting in the hard work back then. 💪`,
         liveURL: "",
