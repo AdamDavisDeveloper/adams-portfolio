@@ -295,7 +295,7 @@ export const ProjectData = [
         id: "oqaro-interiors",
         title: "OQARO Interiors",
         subtitle: getProjectDescriptionFromTile("oqaro-interiors"),
-        writeUp: "I created this in an effort to code a sleek landing page quickly for practice. I made it three years ago and it's amazing to see the progress I have made. I'm including it on this website for old times sake, and for me to be grateful to my past self for puting in the hard work back then. 💪",
+        writeUp: `I created this in an effort to code a sleek landing page quickly for practice. I made it ${yearsSinceDate("05-2021")} years ago and it's amazing to see the progress I have made. I'm including it on this website for old times sake, and for me to be grateful to my past self for puting in the hard work back then. 💪`,
         liveURL: "",
         github: "",
         sections: [

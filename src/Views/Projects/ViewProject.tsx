@@ -71,6 +71,7 @@ export default function() {
             {
                 projectData.sections.map((section, i) => (
                     <Section 
+                        key={i}
                         leftOrientation={i % 2 == 0 ? true : false} //left orient every other
                         text={section.text}
                         imgPath={section.imgPath}
@@ -89,8 +90,8 @@ export default function() {
             <h2>Technologies Used</h2>
             <div id="TechnologiesRow">
                 {
-                    projectData.technologies.map((tech) => {
-                        return <TechnologyLogo name={tech.name} image={tech.image} />
+                    projectData.technologies.map((tech, i) => {
+                        return <TechnologyLogo key={i} name={tech.name} image={tech.image} />
                     })
                 }
             </div>
