@@ -69,13 +69,14 @@ function getProjectTitleFromTile(projectID: string): string | undefined {
 }
 
 const tags = {
-    javascript:     {name: "JavaScript",        color: "rgba(223, 217, 61, 0.58)"},
+    fullstack:      {name: "Fullstack",         color: "#5fc69b"},
+    react:          {name: "React",             color: "#0058ff"},
     typescript:     {name: "TypeScript",        color: "#234D5A"},
+    javascript:     {name: "JavaScript",        color: "rgba(223, 217, 61, 0.78)"},
     generative:     {name: "Generative",        color: "#235A29"},
     algorithm:      {name: "Algorithm",         color: "#5A2330"},
     learning:       {name: "Learning",          color: "#315E4B"},
-    design:         {name: "Design",            color: "#00c3da"},
-    fullstack:      {name: "Fullstack",         color: "#5fc69b"}
+    design:         {name: "Design",            color: "#ce8b0e"},
 }
 
 export const technologies = {
@@ -105,7 +106,7 @@ export const ProjectTileData: projectTileTypes[] = [
         description: `A way to connect with your neighbors in "space".`,
         urlSlug: "outer-space-connector",
         imagePath: "",
-        tags: [ tags.typescript, tags.fullstack, tags.design ],
+        tags: [ tags.react, tags.typescript, tags.fullstack, tags.design ],
     },
     {
         title: "See Something New",
@@ -119,7 +120,7 @@ export const ProjectTileData: projectTileTypes[] = [
         description: "A React web portfolio template I made with some nice scoll and transition animations. Feel free to use it!",
         urlSlug: "portfolio-template",
         imagePath: "",
-        tags: [ tags.javascript, tags.design ],
+        tags: [ tags.react, tags.javascript, tags.design ],
     },
     {
         title: "Links+",
@@ -133,7 +134,7 @@ export const ProjectTileData: projectTileTypes[] = [
         description: "Send and receive anonymous audio messages with strangers.",
         urlSlug: "palvox",
         imagePath: "",
-        tags: [ tags.design, tags.fullstack, tags.javascript ],
+        tags: [ tags.react, tags.fullstack, tags.javascript, tags.design, ],
     },
     {
         title: "Korean Flashcards",
@@ -147,7 +148,7 @@ export const ProjectTileData: projectTileTypes[] = [
         description: "A React music player for listening to a currated list of chillhop beats for studying/coding.",
         urlSlug: "cozy-chillhop",
         imagePath: "",
-        tags: [ tags.javascript, tags.design ],
+        tags: [ tags.react, tags.javascript, tags.design ],
     },
     {
         title: "OQARO Interiors",
